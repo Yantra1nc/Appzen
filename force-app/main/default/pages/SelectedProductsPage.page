@@ -1,0 +1,32 @@
+<apex:page controller="AddProductController">
+    <script>
+    function confirmCancel() {
+        var isCancel = confirm("Are you sure you wish to cancel?");
+        if (isCancel) return true;
+        return false;
+    }  
+    
+    </script>
+    <apex:form >
+       
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+            <apex:commandButton action="{!cancel}" value="Cancel" onclick="return confirmCancel()" immediate="true" id="cancel" />
+            <apex:commandButton value="Save" action="{!insertproduct}"/>
+            </apex:pageBlockButtons>
+ 
+            
+ 
+                    <apex:pageBlockTable value="{!selectedProducts}" var="p" id="table2" title="Selected Products">
+                    <apex:column value="{!p.Name}" headerValue="Product Name"/>
+                    <apex:column value="{!p.Description}" headerValue="Description"/>
+                    <apex:column value="{!p.Brand__c}" headerValue="Brand"/>
+                    <apex:column value="{!p.Collection__c}" headerValue="Collection"/>
+                    <apex:column value="{!p.Design_No__c}" headerValue="Design No."/>
+                    <apex:column value="{!p.Size__c}" headerValue="Size"/>
+                </apex:pageBlockTable> 
+ 
+ 
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

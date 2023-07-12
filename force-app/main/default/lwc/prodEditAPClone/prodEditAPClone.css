@@ -1,0 +1,8 @@
+@media screen and (min-width: 800) and (max-width: 1400px) {
+    .addeditComp{
+        max-width: 1920px;
+
+    }
+}
+
+.THIS .slds-th__action{ justify-content: center !important; }

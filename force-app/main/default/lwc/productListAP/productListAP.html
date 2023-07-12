@@ -1,0 +1,19 @@
+<template>
+    
+    <lightning-card title="Catalog" icon-name="standard:catalog">
+        <lightning-layout multiple-rows horizontal-align="center">
+           
+            <template if:true={products}>
+                
+                    <div class="slds-box" key={products.Id}>  
+                        <lightning-datatable  
+                        data={products.data} columns={cols} key-field="Id">  
+                        </lightning-datatable>  
+                      </div>     
+                    
+                          
+            </template>                      
+        </lightning-layout>
+    </lightning-card>
+
+</template>

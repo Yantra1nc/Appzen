@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global">
+    <ltng:require styles="{!$Resource.AuraWidth}"/>
+    <div>
+        <c:prodEditAPClone recordId="{!v.recordId}"></c:prodEditAPClone>
+        <!--<c:addEditTestComp recordId="{!v.recordId}"></c:addEditTestComp>-->
+    </div>
+</aura:component>

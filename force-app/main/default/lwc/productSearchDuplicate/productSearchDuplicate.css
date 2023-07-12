@@ -1,0 +1,25 @@
+/* .large-table-container-2 {
+    max-width: 1000px;
+    height: 800px;
+    overflow-x: scroll;
+    overflow-y: auto;
+    transform:rotateX(180deg);
+     
+  }
+  .large-table-container-2 c-salesforce-codex-data-table{
+    transform:rotateX(180deg); 
+  } */
+.Container
+{
+    width: 1500px;
+    overflow-y: auto;
+}
+.Content
+{
+    width: 1600px;
+}
+
+.Flipped, .Flipped .Content
+{
+    transform:rotateX(180deg); 
+}

@@ -1,0 +1,63 @@
+<!--=====================================================================
+ * Astonous Cloud Solutions
+ * Name: PicklistWidget.cmp
+ * Purpose : Display Multiselect picklist with options search capablities.
+ *  ===================================================================== -->
+<aura:component access="global"> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="selectedOptions" type="String[]" default="[]" access="global"/>    
+    <aura:attribute name="options" type="list" access="global"/>
+    <aura:attribute name="searchString" type="String"   description="The search string to find."/>
+    <aura:attribute name="optionsBackup" type="String[]" />
+    <aura:attribute name="multiselect" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="selectedLabel" type="String" default="" />
+    <aura:attribute name="showSearchBox" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="selectedValues" type="list" access="global"/>
+
+    <div class="slds-select_container slds-box" style="padding:0px;" tabindex="0">
+        <div aura:id="myPicklist" class="slds-dropdown-trigger_click mainClass">
+            <button class="slds-button slds-pill slds-pill_bare slds-picklist__label btn"
+                    onclick="{!c.showOptions}" aria-haspopup="true">
+                <span class="slds-truncate" style="padding-left: 1rem;">
+                    <aura:if isTrue="{!(v.selectedOptions.length==0)}">
+                        --None--
+                    </aura:if>
+                    <aura:if isTrue="{!(v.selectedOptions.length == 1)}">
+                              {!v.selectedLabel}                                   
+                    </aura:if>
+                    <aura:if isTrue="{!(v.selectedOptions.length>1)}">
+                        Multiple selected
+                    </aura:if>
+                </span>
+           		 
+               
+            </button>
+            <div class="slds-dropdown slds-dropdown_left input slds-is-relative">
+                <aura:if isTrue="{!v.showSearchBox}">
+                <div aura:id="lookup-div" class="slds-lookup input" data-select="single" data-scope="single" data-typeahead="true">
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right" >
+                            <lightning:icon iconName="utility:search" size="x-small" 
+                                            class="slds-input__icon"/>
+                            <ui:inputText aura:id="lookup" value="{!v.searchString}" class="slds-input" 
+                                          updateOn="keyup" keyup="{!c.search}"/>
+                        </div>
+                    </div>
+                </div>
+                </aura:if>
+                <ul class="slds-dropdown__list scroll" role="menu">
+                    <aura:iteration items="{!v.options}" var="item">
+                        <li aura:id="option"  id="{!item.value}" title="{!item.label}" class="slds-dropdown__item" onclick="{!c.selectValue}">
+                            <a href="javascript:void(0);" role="menuitem">
+                                <p class="slds-truncate" >
+                                    <c:PicklistSelectedOptions selectedValue="{!v.selectedOptions}" title="{!item.value}" />                         
+                                    {!item.label}
+                                </p>
+                            </a>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </div>
+        </div>
+    </div>
+</aura:component>

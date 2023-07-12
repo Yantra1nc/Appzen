@@ -1,0 +1,81 @@
+<template>
+    <lightning-layout class="slds-scrollable_x [small size override] [medium size override] [large size override]">
+        
+        <lightning-layout-item size="2" class="slds-var-p-bottom_small">           
+            <c-product-filter-a-p></c-product-filter-a-p>  
+        </lightning-layout-item>
+        <lightning-layout-item> 
+            <div class="slds-clearfix" style="padding: 2em;">
+                <lightning-button onclick={handleClick} style="width: 70px;" variant="brand" label="Save" class="slds-align_absolute-center"></lightning-button>
+            </div>           
+            <c-field-summary-a-p orderno={orderNo} orderdate={orderDate} expirydate={expiryDate} mrp_rollup={MRP_Rollup} quantity={quantityEnd} total={totalordervalue} gst={gstPriceTotal} final={total}></c-field-summary-a-p>
+           
+           
+                <div class="slds-box" key={products.Id}>  
+                    <!--<lightning-datatable 
+                         max-column-width="30px"                
+                         suppress-bottom-bar="true" 
+                         data={products} 
+                         columns={cols} 
+                         key-field="Id"
+                         draft-values={draftValues}
+                         data-id={products.Id}
+                         id={key}
+                         checked={bool}    
+                         data-rowid={products.Id}
+                         onrowselection={getSelectedName}                
+                         oncellchange={handleChange}>
+                     </lightning-datatable>-->
+                     <div>
+                         <div>
+                            <c-salesforce-codex-data-table                     
+                            suppress-bottom-bar="true" 
+                            data={products} 
+                            columns={cols} 
+                            key-field="Id"
+                            draft-values={draftValues}
+                            data-id={products.Id}
+                            id={key}
+                            data-rowid={products.Id}
+                            onrowselection={getSelectedName}                     
+                            selected-rows={selectedRows}                
+                            oncellchange={handleChange}
+                            autocomplete = "off" 
+                            default-sort-direction={defaultSortDirection}
+                            sorted-direction={sortDirection}
+                            sorted-by={sortedBy}
+                            onsort={onHandleSort}                       
+                        >                    
+                        </c-salesforce-codex-data-table>
+                        </div>
+                     </div>                 
+                </div> 
+            
+        <br>
+            <lightning-layout horizontal-align="space">
+                <lightning-layout-item flexibility="auto">
+                    <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler}>
+                    </lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    Page {page} of {totalPage}
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right"
+                        onclick={nextHandler}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+            <div class="slds-clearfix" style="padding: 2em;">
+                <lightning-button onclick={handleClick} style="width: 70px;" variant="brand" label="Save" class="slds-align_absolute-center"></lightning-button>
+            </div> 
+        </lightning-layout-item>
+    </br>
+  
+       
+       <!-- <lightning-layout-item size="10" class="slds-var-p-bottom_small">
+
+            <c-product-list-duplicate products={wiredProducts.data}></c-product-list-duplicate>
+
+        </lightning-layout-item>-->
+    </lightning-layout>
+</template>

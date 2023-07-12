@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global">
+    <ltng:require styles="{!$Resource.AuraWidth}"/>
+    <c:productSearchAP recordId="{!v.recordId}"></c:productSearchAP>
+</aura:component>

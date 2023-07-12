@@ -1,0 +1,64 @@
+<template>
+	<div>
+		<lightning-card size="2">
+			&nbsp;
+			<lightning-button-icon variant="brand" type="button" value="Filters" icon-name="action:filter" onclick={hideFilterColumn}></lightning-button-icon>		
+			<template if:true={hideFilter}>
+				<lightning-layout multiple-rows class="slds-text-body_small">
+				
+					<!--<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={brandPicklistValues.data}>
+						<lightning-checkbox-group name="brand" label="Brand" options={brandPicklistValues.data.values}
+							value={brand} onchange={handleChange}>
+						</lightning-checkbox-group>
+					</lightning-layout-item>-->
+		
+					<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={collectionsPicklistValues.data}>
+						<lightning-checkbox-group name="collections" label="Collections" options={collectionsPicklistValues.data.values}
+							value={collections} onchange={handleChange}>
+						</lightning-checkbox-group>
+					</lightning-layout-item>
+		
+					<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={prodTypePicklistValues.data}>
+						<lightning-checkbox-group name="prodType" label="ProductTypes" options={prodTypePicklistValues.data.values}
+							value={prodType} onchange={handleChange}>
+						</lightning-checkbox-group>
+					</lightning-layout-item>
+		
+					<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={sizePicklistValues.data}>
+						<lightning-checkbox-group name="size" label="Size" options={sizePicklistValues.data.values}
+							value={size} onchange={handleChange}>
+						</lightning-checkbox-group>
+					</lightning-layout-item>
+		
+					<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={colorPicklistValues.data}>
+						<lightning-checkbox-group name="color" label="Color" options={colorPicklistValues.data.values}
+							value={color} onchange={handleChange}>
+						</lightning-checkbox-group>
+					</lightning-layout-item>
+		
+					<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={designTypePicklistValues.data}>
+						<lightning-checkbox-group name="designType" label="DesignType" options={designTypePicklistValues.data.values}
+							value={designType} onchange={handleChange}>
+						</lightning-checkbox-group>
+					</lightning-layout-item>
+		
+					<!--<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={designNoPicklistValues.data}>
+						<lightning-checkbox-group name="designNo" label="DesignNo" options={designNoPicklistValues.data.values}
+							value={designNo} onchange={handleChange}>
+						</lightning-checkbox-group>
+					</lightning-layout-item>-->
+					
+					<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" aria-label="Price">
+						<lightning-slider name="minPrice" label="Min Rate" value={minPrice} onchange={handleChange} min = '0' max='10000'>
+						</lightning-slider>
+						&nbsp;
+						<lightning-slider name="maxPrice" label="Max Rate" value={maxPrice} onchange={handleChange} min = '0' max='10000'>
+						</lightning-slider>
+					</lightning-layout-item>	
+		
+				</lightning-layout>
+			</template>		
+		</lightning-card>
+	</div>
+   
+</template>

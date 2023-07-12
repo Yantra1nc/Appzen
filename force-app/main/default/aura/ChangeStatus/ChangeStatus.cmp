@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 
+
+
+<aura:attribute name="record" type="Opportunity" default="{ 'sobjectType': 'Opportunity' }" />
+  <aura:attribute name="complete" type="Boolean" default="false" />
+  <force:recordData recordId="{!v.recordId}"
+                    fields="['Id','StageName']"
+                    targetFields="{!v.record}"
+                    aura:id="recordData"
+                    mode="EDIT"
+                    recordUpdated="{!c.recordLoaded}" />
+
+
+</aura:component>

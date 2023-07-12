@@ -1,0 +1,81 @@
+<template>
+	<lightning-card>
+		&nbsp;
+		<lightning-button-icon variant="brand" type="button" value="Filters" icon-name="action:filter" alternative-text="Filters" ></lightning-button-icon><span class="slds-text-heading_small" style="margin-left: 10px;">Filters</span>
+		
+		<template if:true={hideFilter}>
+			<lightning-layout multiple-rows class="slds-text-body_small">
+			
+				<!--<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={brandPicklistValues.data}>
+					<lightning-checkbox-group name="brand" label="Brand" options={brandPicklistValues.data.values}
+						value={brand} onchange={handleChange}>
+					</lightning-checkbox-group>
+				</lightning-layout-item>-->
+				
+				<lightning-layout-item   class="slds-border_bottom" size="12" padding="around-large" if:true={checkBoxOptions}>
+					<details>
+						<summary style="color: #069;font-family: arial, sans-serif;cursor: pointer;font-size: medium;"> > Collections</summary>
+						<lightning-checkbox-group name="collections" label="" options={options}
+									value={collections} onchange={handleChange}>
+						</lightning-checkbox-group>					
+					</details>
+				</lightning-layout-item>
+
+				<lightning-layout-item   class="slds-border_bottom" size="12" padding="around-large" if:true={prodTypePicklistValues.data}>
+					<details>
+						<summary style="color: #069;font-family: arial, sans-serif;cursor: pointer;font-size: medium;"> > Product Type</summary>
+						<lightning-checkbox-group name="prodType" label="" options={prodTypePicklistValues.data.values}
+				         value={prodType} onchange={handleChange}>
+			            </lightning-checkbox-group>			
+					</details>
+				</lightning-layout-item>
+
+				<lightning-layout-item   class="slds-border_bottom" size="12" padding="around-large" if:true={sizePicklistValues.data}>
+					<details>
+						<summary style="color: #069;font-family: arial, sans-serif;cursor: pointer;font-size: medium;"> > Size</summary>
+						<lightning-checkbox-group name="size" label="" options={sizePicklistValues.data.values}
+						value={size} onchange={handleChange}>
+					    </lightning-checkbox-group>			
+					</details>
+				</lightning-layout-item>
+
+				<lightning-layout-item   class="slds-border_bottom" size="12" padding="around-large" if:true={colorPicklistValues.data}>
+					<details>
+						<summary style="color: #069;font-family: arial, sans-serif;cursor: pointer;font-size: medium;"> > Color</summary>
+						<lightning-checkbox-group name="color" label="" options={colorPicklistValues.data.values}
+						value={color} onchange={handleChange}>
+					   </lightning-checkbox-group>			
+					</details>
+				</lightning-layout-item>	
+
+				<lightning-layout-item   class="slds-border_bottom" size="12" padding="around-large" if:true={designTypePicklistValues.data}>
+					<details>
+						<summary style="color: #069;font-family: arial, sans-serif;cursor: pointer;font-size: medium;"> > Design Type</summary>
+						<lightning-checkbox-group name="designType" label="" options={designTypePicklistValues.data.values}
+					    value={designType} onchange={handleChange}>
+					    </lightning-checkbox-group>		
+					</details>
+				</lightning-layout-item>
+	
+				<!--<lightning-layout-item class="slds-border_bottom" size="12" padding="around-large" if:true={designNoPicklistValues.data}>
+					<lightning-checkbox-group name="designNo" label="DesignNo" options={designNoPicklistValues.data.values}
+						value={designNo} onchange={handleChange}>
+					</lightning-checkbox-group>
+				</lightning-layout-item>-->
+
+				<lightning-layout-item   class="slds-border_bottom" size="12" padding="around-large">
+					<details>
+						<summary style="color: #069;font-family: arial, sans-serif;cursor: pointer;font-size: medium;"> > Price</summary>
+						<lightning-slider name="minPrice" label="Min Rate" value={minPrice} onchange={handleChange} min = '0' max='10000'>
+						</lightning-slider>
+						&nbsp;
+						<lightning-slider name="maxPrice" label="Max Rate" value={maxPrice} onchange={handleChange} min = '0' max='10000'>
+						</lightning-slider>	
+					</details>
+				</lightning-layout-item>				
+	
+			</lightning-layout>
+		</template>		
+	</lightning-card>
+   
+</template>
