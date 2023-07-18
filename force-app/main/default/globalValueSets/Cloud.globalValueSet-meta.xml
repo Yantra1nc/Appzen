@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AWS</fullName>
+        <default>false</default>
+        <label>AWS</label>
+    </customValue>
+    <customValue>
+        <fullName>Azure</fullName>
+        <default>false</default>
+        <label>Azure</label>
+    </customValue>
+    <customValue>
+        <fullName>GCP</fullName>
+        <default>false</default>
+        <label>GCP</label>
+    </customValue>
+    <customValue>
+        <fullName>On-prem</fullName>
+        <default>false</default>
+        <label>On-prem</label>
+    </customValue>
+    <masterLabel>Cloud</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

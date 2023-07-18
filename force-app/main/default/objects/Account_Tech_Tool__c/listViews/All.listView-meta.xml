@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Atlan_Integration_Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Notes__c</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>Tech_Tool__c</columns>
+    <columns>Tech_Tool_Type__c</columns>
+    <columns>Tool_Priority__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>New Business Opp</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Mutual_Action_Plan_Link__c</fieldNames>
+        <fieldNames>Metrics__c</fieldNames>
+        <fieldNames>Decision_Criteria__c</fieldNames>
+        <fieldNames>Identify_Pain__c</fieldNames>
+        <fieldNames>Compelling_Event__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;- Begin to build champion&amp;#39;s deck and validate core assumptions with champion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;- Confirm there are no key blockers (i.e. features, sec, deployment, etc.)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;- Identify all key stakeholders needed to a.) formally evaluate Atlan and b.) get final buy-in for the solution and build a plan to engage them prior to POC&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;EXIT CRITERIA: &lt;/strong&gt;&lt;strong&gt;Decision Process and Criteria, Competition, Compelling Event Champion complete in MEDDICCC&lt;/strong&gt;. Prospect confirms Evaluation of Atlan in next 60 days.&lt;/p&gt;</info>
+        <picklistValueName>Business Value</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Prospect_Decision__c</fieldNames>
+        <fieldNames>Closed_Reason_Full_Details__c</fieldNames>
+        <fieldNames>Main_Closed_Reason__c</fieldNames>
+        <fieldNames>Main_Closed_Reason_Detail__c</fieldNames>
+        <fieldNames>Primary_Competitor__c</fieldNames>
+        <info>&lt;p&gt;Write deal summary &amp;amp; append signed contract to opportunity. Must be validated by Sales Ops in order to move to closed-won.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;EXIT CRITERIA: &lt;/strong&gt;Signed Contract. AE completes &amp;quot;why did we win&amp;quot; summary and shares internally&lt;/p&gt;</info>
+        <picklistValueName>Contracting &amp; Procurement</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;- Create Champion&amp;#39;s Deck Demonstrating Value of Atlan&lt;/p&gt;&lt;p&gt;- Present to all key stakeholders needed to get final buy-in for the solution&lt;/p&gt;&lt;p&gt;- Understand prospect&amp;#39;s paperwork process and begin shaping close plan&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;﻿&lt;/span&gt;&lt;strong style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;EXIT CRITERIA: &lt;/strong&gt;Verbal on Atlan solution from all stakeholders &amp;amp; economic buyer. Formal proposal provided.&lt;/p&gt;</info>
+        <picklistValueName>Go / No-Go</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Legal_Name__c</fieldNames>
+        <fieldNames>Contract_Start_Date__c</fieldNames>
+        <fieldNames>Contract_Term_months__c</fieldNames>
+        <fieldNames>Billing_Frequency__c</fieldNames>
+        <fieldNames>Cloud_Costs_Billing__c</fieldNames>
+        <info>&lt;p&gt;-Provide formal paperwork to prospect adhering to Atlan&amp;#39;s Paperwork Process Doc. &lt;/p&gt;&lt;p&gt;-Mutual action plan updates with detailed dates, required responsibilities, and all steps mapped out to a signed contract.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;﻿&lt;/span&gt;&lt;strong style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;EXIT CRITERIA: &lt;/strong&gt;Customer has agreed in writing to most recent proposal and legal documents delivered by Atlan AE&lt;/p&gt;</info>
+        <picklistValueName>Proposal &amp; Negotiation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Metrics__c</fieldNames>
+        <fieldNames>Decision_Criteria__c</fieldNames>
+        <fieldNames>Decision_Process__c</fieldNames>
+        <fieldNames>Identify_Pain__c</fieldNames>
+        <fieldNames>Compelling_Event__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;- Prep Sales Engineering on customer + fill out Solution Session Doc&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;- Collaboratively complete Solution Session doc with customer and validate all core items with prospect.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;- Review Mutual Action Plan and confirm with prospect.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;﻿&lt;/span&gt;&lt;strong style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;EXIT CRITERIA: &lt;/strong&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;Solution session completed where prospect and Atlan aligned on ideal business outcome of problem statements we&amp;#39;re solving for. Prospect and Atlan agree to logistics of MAP. MEDDICCC completed&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Solution-Fit</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>POC_Type__c</fieldNames>
+        <fieldNames>POC_Stage__c</fieldNames>
+        <fieldNames>POC_Start_Date__c</fieldNames>
+        <fieldNames>POC_End_Date__c</fieldNames>
+        <fieldNames>POC_Decision__c</fieldNames>
+        <info>&lt;p&gt;- Outline 3-4 key meetings and next steps with prospect to evaluate solution&lt;/p&gt;&lt;p&gt;- Execute on Value Stream Workshop + End-User / Technical Presentations over course of eval timeframe&lt;/p&gt;&lt;p&gt;- Educate the prospect on core functionality / use cases of the platform&lt;/p&gt;&lt;p&gt;- Educate the prospect on customer success process and how we can make thems successful&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;﻿&lt;/span&gt;&lt;strong style=&quot;font-family: Avenir, Arial; font-size: 10pt;&quot;&gt;EXIT CRITERIA: &lt;/strong&gt;Technical win: Prospect has determined Atlan meets their required capabilities &amp;amp; would like move forward with commercial discussion.&lt;/p&gt;</info>
+        <picklistValueName>Validation</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>New_Customer</recordTypeName>
+</PathAssistant>

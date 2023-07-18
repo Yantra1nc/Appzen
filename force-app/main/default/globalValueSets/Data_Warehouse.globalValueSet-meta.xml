@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Snowflake</fullName>
+        <default>false</default>
+        <label>Snowflake</label>
+    </customValue>
+    <customValue>
+        <fullName>Redshift</fullName>
+        <default>false</default>
+        <label>Redshift</label>
+    </customValue>
+    <customValue>
+        <fullName>BigQuery</fullName>
+        <default>false</default>
+        <label>BigQuery</label>
+    </customValue>
+    <customValue>
+        <fullName>Databricks</fullName>
+        <default>false</default>
+        <label>Databricks</label>
+    </customValue>
+    <customValue>
+        <fullName>Firebolt</fullName>
+        <default>false</default>
+        <label>Firebolt</label>
+    </customValue>
+    <customValue>
+        <fullName>Azure Synapse</fullName>
+        <default>false</default>
+        <label>Azure Synapse</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Data Warehouse</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

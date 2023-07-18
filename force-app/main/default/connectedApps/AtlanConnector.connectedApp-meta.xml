@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>uriel@atlan.com</contactEmail>
+    <iconUrl>https://login.salesforce.com/logos/Custom/Square_Primary/icon.svg</iconUrl>
+    <label>AtlanConnector</label>
+    <logoUrl>https://login.salesforce.com/logos/Custom/Square_Primary/logo.png</logoUrl>
+    <oauthConfig>
+        <callbackUrl>https://oauthdebugger.com/debug</callbackUrl>
+        <certificate>MIIDyjCCArICCQC9+B/7QQGIUDANBgkqhkiG9w0BAQsFADCBpjELMAkGA1UEBhMCTVkxFTATBgNVBAgMDEt1YWxhIEx1bXB1cjEVMBMGA1UEBwwMS3VhbGEgTHVtcHVyMQ4wDAYDVQQKDAVBdGxhbjEWMBQGA1UECwwNT3JjaGVzdHJhdGlvbjEZMBcGA1UEAwwQKi5zYWxlc2ZvcmNlLmNvbTEmMCQGCSqGSIb3DQEJARYXbGVlc2lhbi5sb29uZ0BhdGxhbi5jb20wHhcNMjMwMTEwMTA1NzI4WhcNMjQwMTEwMTA1NzI4WjCBpjELMAkGA1UEBhMCTVkxFTATBgNVBAgMDEt1YWxhIEx1bXB1cjEVMBMGA1UEBwwMS3VhbGEgTHVtcHVyMQ4wDAYDVQQKDAVBdGxhbjEWMBQGA1UECwwNT3JjaGVzdHJhdGlvbjEZMBcGA1UEAwwQKi5zYWxlc2ZvcmNlLmNvbTEmMCQGCSqGSIb3DQEJARYXbGVlc2lhbi5sb29uZ0BhdGxhbi5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDcz1a01WBGQiBqUeHegeHCDkagyNTvLaRplIqYgSyaY6A2lJSkKqUgba/7uvgXL0VANjEX4iGG95Bb0rndQLgdMeFrH2eN6IqWNfuNlus6ZFtap3dFOypmtX50BRj16DLmtwsJiOIlwwD5dPAAvK+7pvrKT68JATHSWDYJcX6XgMJ0X3fWTRFcM6k29nnYYVNfTObeN2vwqfK0FBPQHP3adGvGdBmT1CNXigzN5bpoowrWiJ+QJ85ul1k470mIjppf4q1RRCy8xqZfBweoAPTYsuNGV2cA8WgQf8NU730ZNEjotOC6q4ztboGfwEGkQnTlio29lYGfy9QEWVpuHufFAgMBAAEwDQYJKoZIhvcNAQELBQADggEBABJgKFru+pCxs7DNLeeiHp81EMj9WDsfKz2IBB9NyquovCrWVD1IWCc14YAflgUAaL/MmW8YbQg1gZrXy6WMxL4/WkUVeg5IRBA4rp2djr1/6TV5Yn1HtU6aeihZ2fEan1tb6WcwR+xDSPvGD7EP27ZTL6b5lvy6NrhQRw8XAwD2dbxStrxnsuDqmFQ5511+ohdaQezOPW2zrnXGeTl0NBtNsxckjpxp0fPAqclgu9yEUgwK8cqUGMrur2UDvjqFVgLAscIvJQrIAeWcLL7kJohV86HsEfIWnoczGZBBbVbsuP14F5FktgnDFG4hMf27vtFBWg7oq2Q5NFEiwmLAfUI=</certificate>
+        <consumerKey>3MVG9xfrbKQ6hBytnC5pEE29nNpGKk5Fk0g.QOqPA75nTyJSnv2pUqzc.y2lT54U6dYBJK0_qS0z1Hl_eausy</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>Atlan Administrator</profileName>
+</ConnectedApp>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Tableau</fullName>
+        <default>false</default>
+        <label>Tableau</label>
+    </customValue>
+    <customValue>
+        <fullName>Looker</fullName>
+        <default>false</default>
+        <label>Looker</label>
+    </customValue>
+    <customValue>
+        <fullName>PowerBI</fullName>
+        <default>false</default>
+        <label>PowerBI</label>
+    </customValue>
+    <customValue>
+        <fullName>Sisense</fullName>
+        <default>false</default>
+        <label>Sisense</label>
+    </customValue>
+    <customValue>
+        <fullName>Microstrategy</fullName>
+        <default>false</default>
+        <label>Microstrategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Qlik</fullName>
+        <default>false</default>
+        <label>Qlik</label>
+    </customValue>
+    <customValue>
+        <fullName>Quicksight</fullName>
+        <default>false</default>
+        <label>Quicksight</label>
+    </customValue>
+    <customValue>
+        <fullName>Periscope</fullName>
+        <default>false</default>
+        <label>Periscope</label>
+    </customValue>
+    <customValue>
+        <fullName>Metabase</fullName>
+        <default>false</default>
+        <label>Metabase</label>
+    </customValue>
+    <customValue>
+        <fullName>Thoughtspot</fullName>
+        <default>false</default>
+        <label>Thoughtspot</label>
+    </customValue>
+    <customValue>
+        <fullName>Mode</fullName>
+        <default>false</default>
+        <label>Mode</label>
+    </customValue>
+    <customValue>
+        <fullName>Apache Superset</fullName>
+        <default>false</default>
+        <label>Apache Superset</label>
+    </customValue>
+    <customValue>
+        <fullName>Preset</fullName>
+        <default>false</default>
+        <label>Preset</label>
+    </customValue>
+    <customValue>
+        <fullName>Domo</fullName>
+        <default>false</default>
+        <label>Domo</label>
+    </customValue>
+    <customValue>
+        <fullName>Sigma</fullName>
+        <default>false</default>
+        <label>Sigma</label>
+    </customValue>
+    <customValue>
+        <fullName>Redash</fullName>
+        <default>false</default>
+        <label>Redash</label>
+    </customValue>
+    <customValue>
+        <fullName>Google Data Studio</fullName>
+        <default>false</default>
+        <label>Google Data Studio</label>
+    </customValue>
+    <customValue>
+        <fullName>SAP BusinessObjects</fullName>
+        <default>false</default>
+        <label>SAP BusinessObjects</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>BI Tool</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>LightningBolt</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Read_Only_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Atlan Read Only</profile>
+    </profileActionOverrides>
+    <tabs>standard-LightningBoltHome</tabs>
+    <tabs>TrulyActivity__Truly_Log__c</tabs>
+    <tabs>Tech_Tool__c</tabs>
+    <tabs>Account_Tech_Tool__c</tabs>
+    <tabs>AccountValueStream__c</tabs>
+    <tabs>ValueStream__c</tabs>
+    <tabs>Context_Action__c</tabs>
+    <tabs>Invoice__c</tabs>
+    <tabs>Payment__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>LightningBolt_UtilityBar</utilityBar>
+</CustomApplication>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Streams__c</fullName>
+    <description>The Value Streams the Context or Action is enabling</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Value Streams the Context or Action is enabling</inlineHelpText>
+    <label>Value Streams</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Data access to externals</fullName>
+                <default>false</default>
+                <label>Data access to externals</label>
+            </value>
+            <value>
+                <fullName>Data discrepancy issues</fullName>
+                <default>false</default>
+                <label>Data discrepancy issues</label>
+            </value>
+            <value>
+                <fullName>Building forecasting models</fullName>
+                <default>false</default>
+                <label>Building forecasting models</label>
+            </value>
+            <value>
+                <fullName>Calculating KPIs</fullName>
+                <default>false</default>
+                <label>Calculating KPIs</label>
+            </value>
+            <value>
+                <fullName>Analyzing data</fullName>
+                <default>false</default>
+                <label>Analyzing data</label>
+            </value>
+            <value>
+                <fullName>Creating reports</fullName>
+                <default>false</default>
+                <label>Creating reports</label>
+            </value>
+            <value>
+                <fullName>Debugging dashboards &amp; tables</fullName>
+                <default>false</default>
+                <label>Debugging dashboards &amp; tables</label>
+            </value>
+            <value>
+                <fullName>Maintaining pipelines</fullName>
+                <default>false</default>
+                <label>Maintaining pipelines</label>
+            </value>
+            <value>
+                <fullName>Data migration</fullName>
+                <default>false</default>
+                <label>Data migration</label>
+            </value>
+            <value>
+                <fullName>Reducing storage cost</fullName>
+                <default>false</default>
+                <label>Reducing storage cost</label>
+            </value>
+            <value>
+                <fullName>Data deletion requests</fullName>
+                <default>false</default>
+                <label>Data deletion requests</label>
+            </value>
+            <value>
+                <fullName>Enforcing security policies</fullName>
+                <default>false</default>
+                <label>Enforcing security policies</label>
+            </value>
+            <value>
+                <fullName>Deletion of 3rd party data</fullName>
+                <default>false</default>
+                <label>Deletion of 3rd party data</label>
+            </value>
+            <value>
+                <fullName>Providing data access</fullName>
+                <default>false</default>
+                <label>Providing data access</label>
+            </value>
+            <value>
+                <fullName>Developing algorithms</fullName>
+                <default>false</default>
+                <label>Developing algorithms</label>
+            </value>
+            <value>
+                <fullName>Analysing reports</fullName>
+                <default>false</default>
+                <label>Analysing reports</label>
+            </value>
+            <value>
+                <fullName>Addressing analyst requests</fullName>
+                <default>false</default>
+                <label>Addressing analyst requests</label>
+            </value>
+            <value>
+                <fullName>Building new pipelines</fullName>
+                <default>false</default>
+                <label>Building new pipelines</label>
+            </value>
+            <value>
+                <fullName>Deleting duplicate assets</fullName>
+                <default>false</default>
+                <label>Deleting duplicate assets</label>
+            </value>
+            <value>
+                <fullName>Creating audit reports</fullName>
+                <default>false</default>
+                <label>Creating audit reports</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

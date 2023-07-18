@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Parent_field_for_Child</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(ISPICKVAL(Relationship_Type__c , &apos;Child&apos;), OR(Parent_SObject_Map__c =&apos;&apos;,Relationship_with_parent__c=&apos;&apos;), false)</errorConditionFormula>
+    <errorMessage>Parent Sobject and Relationship with parent fields is required for child record.</errorMessage>
+</ValidationRule>

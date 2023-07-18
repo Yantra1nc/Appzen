@@ -1,7 +1,0 @@
-<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global">
-   
-    <ltng:require styles="{!$Resource.AuraWidth}"/>
-    <ui:scrollerWrapper class="scrollBar">
-        <c:productsEditAP recordId="{!v.recordId}"></c:productsEditAP>
-    </ui:scrollerWrapper>
-</aura:component>

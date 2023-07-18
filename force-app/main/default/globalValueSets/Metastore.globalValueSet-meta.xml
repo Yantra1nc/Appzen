@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Glue</fullName>
+        <default>false</default>
+        <label>Glue</label>
+    </customValue>
+    <customValue>
+        <fullName>Hive</fullName>
+        <default>false</default>
+        <label>Hive</label>
+    </customValue>
+    <customValue>
+        <fullName>Delta Lake</fullName>
+        <default>false</default>
+        <label>Delta Lake</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Metastore</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

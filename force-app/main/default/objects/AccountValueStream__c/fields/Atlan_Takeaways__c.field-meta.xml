@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atlan_Takeaways__c</fullName>
+    <description>Key takeaways and learnings from this Account&apos;s implementation of the Value Stream</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Key takeaways and learnings from this Account&apos;s implementation of the Value Stream</inlineHelpText>
+    <label>Atlan Takeaways</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jobs_to_be_Done__c</fullName>
+    <description>The core responsibilities and value-adding activities enabled by the value stream</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The core responsibilities and value-adding activities enabled by the value stream</inlineHelpText>
+    <label>Jobs to be Done</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Building trust across stakeholders</fullName>
+                <default>false</default>
+                <label>Building trust across stakeholders</label>
+            </value>
+            <value>
+                <fullName>Enable business to produce insights faster</fullName>
+                <default>false</default>
+                <label>Enable business to produce insights faster</label>
+            </value>
+            <value>
+                <fullName>Ensure the company is compliant</fullName>
+                <default>false</default>
+                <label>Ensure the company is compliant</label>
+            </value>
+            <value>
+                <fullName>Monitor &amp; improve the health of the business</fullName>
+                <default>false</default>
+                <label>Monitor &amp; improve the health of the business</label>
+            </value>
+            <value>
+                <fullName>Optimising the cost spend on data stack</fullName>
+                <default>false</default>
+                <label>Optimising the cost spend on data stack</label>
+            </value>
+            <value>
+                <fullName>Efficient onboarding of external consultants</fullName>
+                <default>false</default>
+                <label>Efficient onboarding of external consultants</label>
+            </value>
+            <value>
+                <fullName>Efficient onboarding of new joiners</fullName>
+                <default>false</default>
+                <label>Efficient onboarding of new joiners</label>
+            </value>
+            <value>
+                <fullName>Ensure the company is secure</fullName>
+                <default>false</default>
+                <label>Ensure the company is secure</label>
+            </value>
+            <value>
+                <fullName>Maintain the health of the data stack</fullName>
+                <default>false</default>
+                <label>Maintain the health of the data stack</label>
+            </value>
+            <value>
+                <fullName>Moving company&apos;s tech stack to modern scalable and efficient ones</fullName>
+                <default>false</default>
+                <label>Moving company&apos;s tech stack to modern scalable and efficient ones</label>
+            </value>
+            <value>
+                <fullName>Enable data analyst with the most accurate data</fullName>
+                <default>false</default>
+                <label>Enable data analyst with the most accurate data</label>
+            </value>
+            <value>
+                <fullName>Minimising the legal/business risk</fullName>
+                <default>false</default>
+                <label>Minimising the legal/business risk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>action_outbound_message</name>
+        <label>action outbound message</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>Account.R_ba9ab31d8dd74cc2bbd663ba6b3c695b</actionName>
+        <actionType>outboundMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <description>Rattle_No Sales Activity in Last Week</description>
+    <interviewLabel>Rattle_No Sales Activity in Last Week {!$Flow.CurrentRecord} {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Rattle_No Sales Activity in Last Week</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>ISPICKVAL({!$Record.Type}, &quot;Opportunity&quot;)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>scheduled_path</name>
+            <connector>
+                <targetReference>action_outbound_message</targetReference>
+            </connector>
+            <label>scheduled path</label>
+            <offsetNumber>7</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>Last_Sales_Activity__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

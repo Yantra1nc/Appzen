@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is a Remote Site created automatically by Rocketlane for integrating with your Salesforce account. 
+ DO NOT MODIFY OR DELETE THIS.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://atlan.api.rocketlane.com</url>
+</RemoteSiteSetting>

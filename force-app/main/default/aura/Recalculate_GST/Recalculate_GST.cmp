@@ -1,4 +1,0 @@
-<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" extensible="true" controller="RecalculatePrices">
-    <aura:attribute name="oppList" type="List" />
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-</aura:component>

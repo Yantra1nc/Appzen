@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>27</activeVersionNumber>
+    <description>Set Account Type to Customer when an opp is closed won or Prospect otherwise.
+v2 - update to run on every update
+v3 - only update null Account Type
+v4 - update for new account types
+v5 - reliability updates
+v6- only run won branch on update to meet requirements
+v7 - added Pilot type
+v8 - debug Lost Opps
+v10 - Added CS Stage time stamps
+v11/12 - Added opt-out customer stage
+v13/14 - Debug customer opt-out stage update
+v15 - Added Slack notification for intel engine doc updated
+v16 - Updated Pilot to Trial Customer
+v17/18 - Assign CSM to Account ownership
+v22 - Updated Account Type update logic</description>
+    <masterLabel>On Account Update</masterLabel>
+</FlowDefinition>

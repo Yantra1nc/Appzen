@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Airflow</fullName>
+        <default>false</default>
+        <label>Airflow</label>
+    </customValue>
+    <customValue>
+        <fullName>Matillion</fullName>
+        <default>false</default>
+        <label>Matillion</label>
+    </customValue>
+    <customValue>
+        <fullName>Azure Data Factory</fullName>
+        <default>false</default>
+        <label>Azure Data Factory</label>
+    </customValue>
+    <customValue>
+        <fullName>StreamSets</fullName>
+        <default>false</default>
+        <label>StreamSets</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>dbt</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>dbt</label>
+    </customValue>
+    <masterLabel>Data Orchestration</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

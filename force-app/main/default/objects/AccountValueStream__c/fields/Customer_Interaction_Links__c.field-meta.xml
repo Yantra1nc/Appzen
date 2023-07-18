@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Interaction_Links__c</fullName>
+    <description>Links to emails, call snippets, Slack messages, etc. that relate to this Value Stream</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Links to emails, call snippets, Slack messages, etc. that relate to this Value Stream</inlineHelpText>
+    <label>Customer Interaction Links</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

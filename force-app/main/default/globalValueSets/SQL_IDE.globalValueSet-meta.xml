@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>DataGrip</fullName>
+        <default>false</default>
+        <label>DataGrip</label>
+    </customValue>
+    <customValue>
+        <fullName>DBeaver</fullName>
+        <default>false</default>
+        <label>DBeaver</label>
+    </customValue>
+    <customValue>
+        <fullName>Mode</fullName>
+        <default>false</default>
+        <label>Mode</label>
+    </customValue>
+    <customValue>
+        <fullName>PyCharm</fullName>
+        <default>false</default>
+        <label>PyCharm</label>
+    </customValue>
+    <customValue>
+        <fullName>Querybook</fullName>
+        <default>false</default>
+        <label>Querybook</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>SQL IDE</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

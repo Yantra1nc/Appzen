@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1. The Furious Five</fullName>
+        <default>false</default>
+        <label>1. The Furious Five</label>
+    </customValue>
+    <customValue>
+        <fullName>2. Team Tiger Cubs</fullName>
+        <default>false</default>
+        <label>2. Team Tiger Cubs</label>
+    </customValue>
+    <customValue>
+        <fullName>3. Team Pint</fullName>
+        <default>false</default>
+        <label>3. Team Pint</label>
+    </customValue>
+    <masterLabel>Sales Pod</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>UX</fullName>
+        <default>false</default>
+        <label>UX</label>
+    </customValue>
+    <customValue>
+        <fullName>Workflow Integrations</fullName>
+        <default>false</default>
+        <label>Workflow Integrations</label>
+    </customValue>
+    <customValue>
+        <fullName>Data lineage</fullName>
+        <default>false</default>
+        <label>Data lineage</label>
+    </customValue>
+    <customValue>
+        <fullName>Extensibility</fullName>
+        <default>false</default>
+        <label>Extensibility</label>
+    </customValue>
+    <customValue>
+        <fullName>Business glossary</fullName>
+        <default>false</default>
+        <label>Business glossary</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Source Support</fullName>
+        <default>false</default>
+        <label>Data Source Support</label>
+    </customValue>
+    <customValue>
+        <fullName>POC</fullName>
+        <default>false</default>
+        <label>POC</label>
+    </customValue>
+    <customValue>
+        <fullName>Time to value</fullName>
+        <default>false</default>
+        <label>Time to value</label>
+    </customValue>
+    <customValue>
+        <fullName>Monthly contract</fullName>
+        <default>false</default>
+        <label>Monthly contract</label>
+    </customValue>
+    <customValue>
+        <fullName>Startup package</fullName>
+        <default>false</default>
+        <label>Startup package</label>
+    </customValue>
+    <customValue>
+        <fullName>Infrastructure - On-prem</fullName>
+        <default>false</default>
+        <label>Infrastructure - On-prem</label>
+    </customValue>
+    <customValue>
+        <fullName>Infrastructure - Other</fullName>
+        <default>false</default>
+        <label>Infrastructure - Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Infrastructure - GCP</fullName>
+        <default>false</default>
+        <label>Infrastructure - GCP</label>
+    </customValue>
+    <customValue>
+        <fullName>Startup/Company Maturity</fullName>
+        <default>false</default>
+        <label>Startup/Company Maturity</label>
+    </customValue>
+    <customValue>
+        <fullName>Roadmap</fullName>
+        <default>false</default>
+        <label>Roadmap</label>
+    </customValue>
+    <customValue>
+        <fullName>Collaboration</fullName>
+        <default>false</default>
+        <label>Collaboration</label>
+    </customValue>
+    <customValue>
+        <fullName>Deal Champion Left</fullName>
+        <default>false</default>
+        <label>Deal Champion Left</label>
+    </customValue>
+    <customValue>
+        <fullName>New Stakeholder</fullName>
+        <default>false</default>
+        <label>New Stakeholder</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive Buy-in</fullName>
+        <default>false</default>
+        <label>Executive Buy-in</label>
+    </customValue>
+    <customValue>
+        <fullName>Enterprise Focus</fullName>
+        <default>false</default>
+        <label>Enterprise Focus</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Security</fullName>
+        <default>false</default>
+        <label>Product Security</label>
+    </customValue>
+    <customValue>
+        <fullName>Security Certifications</fullName>
+        <default>false</default>
+        <label>Security Certifications</label>
+    </customValue>
+    <customValue>
+        <fullName>Deployment Security</fullName>
+        <default>false</default>
+        <label>Deployment Security</label>
+    </customValue>
+    <customValue>
+        <fullName>Over Budget</fullName>
+        <default>false</default>
+        <label>Over Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>Cheaper Competitor</fullName>
+        <default>false</default>
+        <label>Cheaper Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Feature/Price Mismatch</fullName>
+        <default>false</default>
+        <label>Feature/Price Mismatch</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Competitor Relationship</fullName>
+        <default>false</default>
+        <label>Personal Competitor Relationship</label>
+    </customValue>
+    <customValue>
+        <fullName>Previously Used Competitor</fullName>
+        <default>false</default>
+        <label>Previously Used Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor Brand Affinity</fullName>
+        <default>false</default>
+        <label>Competitor Brand Affinity</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor Positioning</fullName>
+        <default>false</default>
+        <label>Competitor Positioning</label>
+    </customValue>
+    <customValue>
+        <fullName>Problem/Use-case Fit</fullName>
+        <default>false</default>
+        <label>Problem/Use-case Fit</label>
+    </customValue>
+    <customValue>
+        <fullName>Change in Available Resources</fullName>
+        <default>false</default>
+        <label>Change in Available Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Updated Priorities</fullName>
+        <default>false</default>
+        <label>Updated Priorities</label>
+    </customValue>
+    <customValue>
+        <fullName>No Longer See Need</fullName>
+        <default>false</default>
+        <label>No Longer See Need</label>
+    </customValue>
+    <customValue>
+        <fullName>Atlan Company Stage</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Atlan Company Stage</label>
+    </customValue>
+    <customValue>
+        <fullName>Managed SaaS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Managed SaaS</label>
+    </customValue>
+    <customValue>
+        <fullName>Scalablity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Scalablity</label>
+    </customValue>
+    <masterLabel>Closed Reason - Detail</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

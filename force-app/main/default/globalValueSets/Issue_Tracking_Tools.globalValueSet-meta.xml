@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Jira</fullName>
+        <default>false</default>
+        <label>Jira</label>
+    </customValue>
+    <customValue>
+        <fullName>Zendesk</fullName>
+        <default>false</default>
+        <label>Zendesk</label>
+    </customValue>
+    <customValue>
+        <fullName>Freshdeck</fullName>
+        <default>false</default>
+        <label>Freshdeck</label>
+    </customValue>
+    <customValue>
+        <fullName>HappyFox</fullName>
+        <default>false</default>
+        <label>HappyFox</label>
+    </customValue>
+    <customValue>
+        <fullName>ServiceNow</fullName>
+        <default>false</default>
+        <label>ServiceNow</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Issue Tracking Tools</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

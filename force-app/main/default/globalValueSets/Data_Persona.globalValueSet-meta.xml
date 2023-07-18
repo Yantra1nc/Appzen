@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Data Engineering</fullName>
+        <default>false</default>
+        <label>Data Engineering</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Governance</fullName>
+        <default>false</default>
+        <label>Data Governance</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Intelligence</fullName>
+        <default>false</default>
+        <label>Business Intelligence</label>
+    </customValue>
+    <customValue>
+        <fullName>Analytics</fullName>
+        <default>false</default>
+        <label>Analytics</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Science</fullName>
+        <default>false</default>
+        <label>Data Science</label>
+    </customValue>
+    <customValue>
+        <fullName>Head of Data/Data Platforms</fullName>
+        <default>false</default>
+        <label>Head of Data/Data Platforms</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Data Officer</fullName>
+        <default>false</default>
+        <label>Chief Data Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Technical Officer</fullName>
+        <default>false</default>
+        <label>Chief Technical Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Digital Officer</fullName>
+        <default>false</default>
+        <label>Chief Digital Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Information Officer</fullName>
+        <default>false</default>
+        <label>Chief Information Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Analyst</fullName>
+        <default>false</default>
+        <label>Data Analyst</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Analyst</fullName>
+        <default>false</default>
+        <label>Business Analyst</label>
+    </customValue>
+    <customValue>
+        <fullName>Director of Data</fullName>
+        <default>false</default>
+        <label>Director of Data</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Stakeholder</fullName>
+        <default>false</default>
+        <label>Business Stakeholder</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Governance Manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Data Governance Manager</label>
+    </customValue>
+    <masterLabel>Data Persona</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

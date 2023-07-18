@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Intel_Engine_Alert_to_CS_Handoff</name>
+        <label>Send Intel Engine Alert to CS Handoff</label>
+        <locationX>622</locationX>
+        <locationY>2375</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>Good news! The intel engine has been populated for {!$Record.Name}! See here: {!$Record.Intelligence_Engine_URL__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002t55mEAA</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>52.0</apiVersion>
+    <assignments>
+        <name>Set_Account_Type_to_Customer</name>
+        <label>Set Account Type to Customer</label>
+        <locationX>50</locationX>
+        <locationY>1583</locationY>
+        <assignmentItems>
+            <assignToReference>account_type_picklist</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Customer</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Account_with_Account_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Account_Type_to_Customer_in_Opt_out</name>
+        <label>Set Account Type to Customer in Opt-out</label>
+        <locationX>314</locationX>
+        <locationY>1583</locationY>
+        <assignmentItems>
+            <assignToReference>account_type_picklist</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Customer in Opt-out</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Account_with_Account_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Account_Type_to_Customer_in_Opt_out_0</name>
+        <label>Set Account Type to Customer in Opt-out</label>
+        <locationX>578</locationX>
+        <locationY>1583</locationY>
+        <assignmentItems>
+            <assignToReference>account_type_picklist</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Churned - Trial</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Account_with_Account_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Account_Type_to_Lost_Opp</name>
+        <label>Set Account Type to Lost Opp</label>
+        <locationX>1106</locationX>
+        <locationY>1583</locationY>
+        <assignmentItems>
+            <assignToReference>account_type_picklist</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lost Opportunity</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account_with_Account_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Account_Type_to_Opportunity</name>
+        <label>Set Account Type to Opportunity</label>
+        <locationX>842</locationX>
+        <locationY>1583</locationY>
+        <assignmentItems>
+            <assignToReference>account_type_picklist</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Opportunity</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Account_with_Account_Type</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Account_Type</name>
+        <label>Account Type</label>
+        <locationX>754</locationX>
+        <locationY>1463</locationY>
+        <defaultConnector>
+            <targetReference>Churn</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other</defaultConnectorLabel>
+        <rules>
+            <name>TrialCustomer</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Trial Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_End_Date__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Churn</targetReference>
+            </connector>
+            <label>Trial Customer</label>
+        </rules>
+        <rules>
+            <name>Customer</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opt_out_Expiry_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opt_out_Expiry_Date__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_End_Date__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_Type_to_Customer</targetReference>
+            </connector>
+            <label>Customer</label>
+        </rules>
+        <rules>
+            <name>Opt_out_Customer</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opt_out_Expiry_Date__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_Type_to_Customer_in_Opt_out</targetReference>
+            </connector>
+            <label>Opt-out Customer</label>
+        </rules>
+        <rules>
+            <name>Opt_out_Churn</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opt_out_Expiry_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Contract_End_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opt_out_Expiry_Date__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opt_out_Expiry_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_Type_to_Customer_in_Opt_out_0</targetReference>
+            </connector>
+            <label>Opt-out Churn</label>
+        </rules>
+        <rules>
+            <name>Opportunity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>number_of_open_opps</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer in Opt-out</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Trial Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_Type_to_Opportunity</targetReference>
+            </connector>
+            <label>Opportunity</label>
+        </rules>
+        <rules>
+            <name>Lost</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>non_lost_opps</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Number_of_Lost_Opps__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_Type_to_Lost_Opp</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Lost</label>
+        </rules>
+        <rules>
+            <name>Partner</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Partner_Status__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Brendan_as_Owner</targetReference>
+            </connector>
+            <label>Partner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Churn</name>
+        <label>Churn?</label>
+        <locationX>754</locationX>
+        <locationY>1919</locationY>
+        <defaultConnector>
+            <targetReference>Intel_Engine_Link_Added</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Account_Type_set_to_Churn</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Churned - Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Churned - Trial</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Churn_Date</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Account Type set to Churn</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CS_Stage_Changed</name>
+        <label>CS Stage Changed</label>
+        <locationX>754</locationX>
+        <locationY>1127</locationY>
+        <defaultConnector>
+            <targetReference>Account_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Entered_1_Set_up</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>1. Setup</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0. Kickoff &amp; Readiness</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Time_Stamp_Entered_1_Set_up_Account</targetReference>
+            </connector>
+            <label>Entered 1. Set-up</label>
+        </rules>
+        <rules>
+            <name>Entered_2_Launch</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>2. Launch</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>1. Setup</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Time_Stamp_Entered_2_Launch_Account</targetReference>
+            </connector>
+            <label>Entered 2. Launch</label>
+        </rules>
+        <rules>
+            <name>Entered_3_First_Metadata_Workflow</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>3. First Value Stream</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>2. Launch</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Time_Stamp_Entered_3_1st_Metadata_Workflow_Account</targetReference>
+            </connector>
+            <label>Entered 3. First Metadata Workflow</label>
+        </rules>
+        <rules>
+            <name>Entered_4_Activating_Metadata_Workflow</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>4. Activating Value Streams</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>3. First Value Stream</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Time_Stamp_Entered_4_Activating_Metadata_Workflows_Account</targetReference>
+            </connector>
+            <label>Entered 4. Activating Metadata Workflow</label>
+        </rules>
+        <rules>
+            <name>Entered_5_Empowering_Users</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CS_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>5. Empowering Users</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Completed_Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>4. Activating Value Streams</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Time_Stamp_Entered_5_Empowering_Users_Account</targetReference>
+            </connector>
+            <label>Entered 5. Empowering Users</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CSM_and_Account_Mismatch</name>
+        <label>CSM and Account Mismatch</label>
+        <locationX>754</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Intel_Status_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CSM_does_not_own_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Vitally_CSM__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Owner.Email</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Vitally_CSM__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_CSM_Owner_ID</targetReference>
+            </connector>
+            <label>CSM does not own Account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Intel_Engine_Link_Added</name>
+        <label>Intel Engine Link Added</label>
+        <locationX>754</locationX>
+        <locationY>2255</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Link_Added</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Intelligence_Engine_URL__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Intelligence_Engine_URL__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Intel_Engine_Alert_to_CS_Handoff</targetReference>
+            </connector>
+            <label>Link Added</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Records Date on which Intel Status was updated</description>
+        <name>Intel_Status_Updated</name>
+        <label>Intel Status Updated</label>
+        <locationX>754</locationX>
+        <locationY>791</locationY>
+        <defaultConnector>
+            <targetReference>CS_Stage_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Intel_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Intel_Status_Changed_Date</targetReference>
+            </connector>
+            <label>Is changed</label>
+        </rules>
+    </decisions>
+    <description>Set Account Type to Customer when an opp is closed won or Prospect otherwise.
+v2 - update to run on every update
+v3 - only update null Account Type
+v4 - update for new account types
+v5 - reliability updates
+v6- only run won branch on update to meet requirements
+v7 - added Pilot type
+v8 - debug Lost Opps
+v10 - Added CS Stage time stamps
+v11/12 - Added opt-out customer stage
+v13/14 - Debug customer opt-out stage update
+v15 - Added Slack notification for intel engine doc updated
+v16 - Updated Pilot to Trial Customer
+v17/18 - Assign CSM to Account ownership
+v20/21 - Updated Account Type update logic
+v23 - Account Type debug
+v24 - Added logic to update CS stage from Rocketlane Last Stage Complete
+v25 - Account Type debug
+v26 - Capture Intel Status Updated date
+v27 - Set Partner Accounts to be owned by Brendan</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>non_lost_opps</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Number_of_Opps__c} - {!$Record.Number_of_Lost_Opps__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>number_of_open_opps</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Number_of_Opps__c} - {!$Record.Number_of_Lost_Opps__c} - {!$Record.Number_of_Won_Opps__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>On Account Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>On Account Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_CSM_Owner_ID</name>
+        <label>Get CSM Owner ID</label>
+        <locationX>622</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Account_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Email</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Vitally_CSM__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Set_Brendan_as_Owner</name>
+        <label>Set Brendan as Owner</label>
+        <locationX>1370</locationX>
+        <locationY>1583</locationY>
+        <connector>
+            <targetReference>Churn</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0055e000006rKp1AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Time_Stamp_Entered_1_Set_up_Account</name>
+        <label>Time Stamp Entered 1. Set-up Account</label>
+        <locationX>94</locationX>
+        <locationY>1247</locationY>
+        <connector>
+            <targetReference>Account_Type</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CS_Stage__c</field>
+            <value>
+                <stringValue>1. Setup</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Entered_CS_Stage_Set_up__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Time_Stamp_Entered_2_Launch_Account</name>
+        <label>Time Stamp Entered 2. Launch Account</label>
+        <locationX>358</locationX>
+        <locationY>1247</locationY>
+        <connector>
+            <targetReference>Account_Type</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CS_Stage__c</field>
+            <value>
+                <stringValue>2. Launch</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Entered_CS_Stage_Launch__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Time_Stamp_Entered_3_1st_Metadata_Workflow_Account</name>
+        <label>Time Stamp Entered 3. 1st Metadata Workflow Account</label>
+        <locationX>622</locationX>
+        <locationY>1247</locationY>
+        <connector>
+            <targetReference>Account_Type</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CS_Stage__c</field>
+            <value>
+                <stringValue>3. First Value Stream</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Entered_CS_Stage_1st_Value_Stream__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Time_Stamp_Entered_4_Activating_Metadata_Workflows_Account</name>
+        <label>Time Stamp Entered 4. Activating Metadata Workflows Account</label>
+        <locationX>886</locationX>
+        <locationY>1247</locationY>
+        <connector>
+            <targetReference>Account_Type</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CS_Stage__c</field>
+            <value>
+                <stringValue>4. Activating Value Streams</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Entered_CS_Stage_Activating_Valuestreams__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Time_Stamp_Entered_5_Empowering_Users_Account</name>
+        <label>Time Stamp Entered 5. Empowering Users Account</label>
+        <locationX>1150</locationX>
+        <locationY>1247</locationY>
+        <connector>
+            <targetReference>Account_Type</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CS_Stage__c</field>
+            <value>
+                <stringValue>5. Empowering Users</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Entered_CS_Stage_Empowering_Users__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_Owner</name>
+        <label>Update Account Owner</label>
+        <locationX>622</locationX>
+        <locationY>575</locationY>
+        <connector>
+            <targetReference>Intel_Status_Updated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_CSM_Owner_ID.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_with_Account_Type</name>
+        <label>Update Account with Account Type</label>
+        <locationX>1106</locationX>
+        <locationY>1703</locationY>
+        <connector>
+            <targetReference>Churn</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <elementReference>account_type_picklist</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Churn_Date</name>
+        <label>Update Churn Date</label>
+        <locationX>622</locationX>
+        <locationY>2039</locationY>
+        <connector>
+            <targetReference>Intel_Engine_Link_Added</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Churned - Customer</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Churned - Trial</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Became_a_Churn__c</field>
+            <value>
+                <elementReference>$Record.Next_Contract_Opt_out_Expiry_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Intel_Status_Changed_Date</name>
+        <label>Capture Intel Status Updated Date</label>
+        <locationX>622</locationX>
+        <locationY>911</locationY>
+        <connector>
+            <targetReference>CS_Stage_Changed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Intel_Status_Updated_Date__c</field>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>628</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CSM_and_Account_Mismatch</targetReference>
+        </connector>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>account_type_picklist</name>
+        <dataType>Picklist</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

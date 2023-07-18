@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Finance_Alert_Email</name>
+        <label>Finance Alert Email</label>
+        <locationX>314</locationX>
+        <locationY>3191</locationY>
+        <actionName>Opportunity.Won_Opp_Finance_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Post_Closed_Won_Alert_to_Finance_Slack</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post 
+Tough loss, we lost an opportunity with {!$Record.Name} to a competitor. Primary Competitor: {!$Record.Primary_Competitor__c},  Secondary Competitor: {!$Record.Secondary_Competitor__c}, Amount: {!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</description>
+        <name>Post_Closed_Lost_Message_to_Slack</name>
+        <label>Post Closed Lost Message to Slack</label>
+        <locationX>754</locationX>
+        <locationY>2135</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Post_Lost_Opp_to_Slack_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>Tough break, we lost an opportunity with {!$Record.Name} to a competitor. Primary Competitor: {!$Record.Primary_Competitor__c},  Secondary Competitor: {!$Record.Secondary_Competitor__c}, Amount: ${!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}, Full Details: {!$Record.Closed_Reason_Full_Details__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0GDu0000009pVsMAI</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post 
+Heads up, a new {!$Record.Type} contract was signed with {!$Record.Account.Legal_Name__c}. Please see opportunity details below.</description>
+        <name>Post_Closed_Won_Alert_to_Finance_Slack</name>
+        <label>Post Closed Won Alert to Finance Slack</label>
+        <locationX>314</locationX>
+        <locationY>3311</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>Heads up, a new {!$Record.Type} contract was signed with {!$Record.Account.Legal_Name__c}. Please see opportunity details below.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002tj8uEAA</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post 
+Heads up, we have a new customer - {!$Record.Account.Name}! Please see opportunity details below.</description>
+        <name>Post_Closed_Won_Message_to_CS_Slack</name>
+        <label>Post Closed Won Message to CS Slack</label>
+        <locationX>50</locationX>
+        <locationY>2615</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Post_Closed_Won_Message_to_Uriel_Slack</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>Heads up, we have a new customer - {!$Record.Account.Name}! Please see opportunity details below.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002t55mEAA</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post 
+:clap: :clap: Slow clap, we have a new customer! :100: Account: {!$Record.Name}, Amount: {!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</description>
+        <name>Post_Closed_Won_Message_to_Slack</name>
+        <label>Post Closed Won Message to Slack</label>
+        <locationX>50</locationX>
+        <locationY>2495</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Post_Closed_Won_Message_to_CS_Slack</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>:clap: :clap: Slow clap, we have a new customer! :100: Account: {!$Record.Name}   Total Contract Value is ${!$Record.Amount} with ARR of ${!$Record.Order_ARR__c}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c} - {!$Record.Main_Closed_Reason_Detail__c}, Full Details: {!$Record.Closed_Reason_Full_Details__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002t3nNEAQ</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post 
+:clap: :clap: Slow clap, we have a new customer! :100: Account: {!$Record.Name}, Amount: {!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</description>
+        <name>Post_Closed_Won_Message_to_Uriel_Slack</name>
+        <label>Post Closed Won Message to Uriel Slack</label>
+        <locationX>50</locationX>
+        <locationY>2735</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Set_Product_Instance</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>:clap: :clap: Slow clap, we have a new customer! :100: Account: {!$Record.Name}   Total Contract Value is ${!$Record.Amount} with ARR of ${!$Record.Order_ARR__c}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c} - {!$Record.Main_Closed_Reason_Detail__c}, Full Details: {!$Record.Closed_Reason_Full_Details__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002uNoGEAU</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post  {!$Record.Id}
+We lost an opportunity - {!$Record.Name} for {!$Record.Amount}. Prospect Decision: {!$Record.Prospect_Decision__c}. Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</description>
+        <name>Post_Lost_Opp_to_Slack</name>
+        <label>Post Lost Opp to Slack</label>
+        <locationX>1018</locationX>
+        <locationY>2135</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_Opp_Close_Date_and_Forecast_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>We lost an opportunity - {!$Record.Name} for {!$Record.Amount}. Prospect Decision: {!$Record.Prospect_Decision__c}. Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0GDu000000ABeBMAW</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post
+We lost an opportunity with {!$Record.Name} to a competitor. Primary Competitor: {!$Record.Primary_Competitor__c},  Secondary Competitor: {!$Record.Secondary_Competitor__c}, Amount: {!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</description>
+        <name>Post_Lost_Opp_to_Slack_0</name>
+        <label>Post Lost Opp to Slack</label>
+        <locationX>754</locationX>
+        <locationY>2255</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_Opp_Close_Date_and_Forecast_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>We lost an opportunity with {!$Record.Name} to a competitor. Primary Competitor: {!$Record.Primary_Competitor__c},  Secondary Competitor: {!$Record.Secondary_Competitor__c}, Amount: {!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0GDu000000ABeBMAW</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post:
+{!$Record.Name} (expected to be a {!customer_tier} customer) has been moved to the Contracting &amp; Procurement stage and is targeted to close {!$Record.CloseDate}.</description>
+        <name>Post_Stage_Move_to_Intel_Slack</name>
+        <label>Post Stage Move to Intel Slack</label>
+        <locationX>1282</locationX>
+        <locationY>2375</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Account_and_Opportunity_Owner_Mismatch</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>{!$Record.Name} (expected to be a {!customer_tier} customer) has been moved to the Contracting &amp; Procurement stage and is targeted to close {!$Record.CloseDate}.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002uHdDEAU</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Account_and_Opportunity_Owner_Mismatch</name>
+        <label>Account and Opportunity Owner Mismatch</label>
+        <locationX>1942</locationX>
+        <locationY>2255</locationY>
+        <defaultConnectorLabel>Owners the Same</defaultConnectorLabel>
+        <rules>
+            <name>Owners_Different</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_Owner</targetReference>
+            </connector>
+            <label>Owners Different</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Most_Recent_Contract_Opp</name>
+        <label>Most Recent Contract Opp</label>
+        <locationX>1458</locationX>
+        <locationY>1343</locationY>
+        <defaultConnector>
+            <targetReference>Opp_Result</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Most_Recent_Won_Contract</name>
+            <conditionLogic>1 AND (2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsWon</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_Start_Date__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.Contract_Start_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Contract_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000AlmhAAC</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_Contract_Data</targetReference>
+            </connector>
+            <label>Most Recent Won Contract</label>
+        </rules>
+        <rules>
+            <name>Upsell_Record_Type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000AlmhAAC</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opp_Type</targetReference>
+            </connector>
+            <label>Upsell Record Type</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Next_Step_Updated</name>
+        <label>Next Step Updated?</label>
+        <locationX>1458</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Stage_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.NextStep</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opp_Next_Step_Updated_Date</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Opp_Record_Type</name>
+        <label>Opp Record Type</label>
+        <locationX>314</locationX>
+        <locationY>2375</locationY>
+        <defaultConnector>
+            <targetReference>Finance_Alert_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other Record Type</defaultConnectorLabel>
+        <rules>
+            <name>New_Full_Customer</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000Ak9EAAS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_Closed_Won_Message_to_Slack</targetReference>
+            </connector>
+            <label>New Full Customer</label>
+        </rules>
+        <rules>
+            <name>Renewal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000AlnBAAS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Renewal_Record_0</targetReference>
+            </connector>
+            <label>Renewal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Opp_Record_Type_0</name>
+        <label>Opp Record Type</label>
+        <locationX>1414</locationX>
+        <locationY>2135</locationY>
+        <defaultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Account_and_Opportunity_Owner_Mismatch</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other Record Type</defaultConnectorLabel>
+        <rules>
+            <name>New_Customer_or_Pilot_0</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000Ak9JAAS</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000Ak9EAAS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Customer_Tier</targetReference>
+            </connector>
+            <label>New Customer or Pilot</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Opp_Result</name>
+        <label>Opp Result</label>
+        <locationX>1458</locationX>
+        <locationY>2015</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Won</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsWon</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Find_Accelerator_Product</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Won</label>
+        </rules>
+        <rules>
+            <name>Lost_to_Competitor1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Prospect_Decision__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Signed with Competitor</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_Closed_Lost_Message_to_Slack</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Lost to Competitor</label>
+        </rules>
+        <rules>
+            <name>Lost</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_Lost_Opp_to_Slack</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Lost</label>
+        </rules>
+        <rules>
+            <name>Contracting_Procurement</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contracting &amp; Procurement</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Opp_Record_Type_0</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Contracting &amp; Procurement</label>
+        </rules>
+        <rules>
+            <name>POC</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.POC_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.POC_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_POC_Checkbox</targetReference>
+            </connector>
+            <label>POC</label>
+        </rules>
+        <rules>
+            <name>Open_Opp</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <isGoTo>true</isGoTo>
+                <targetReference>Account_and_Opportunity_Owner_Mismatch</targetReference>
+            </connector>
+            <label>Open Opp</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Opp_Type</name>
+        <label>Opp Type</label>
+        <locationX>1172</locationX>
+        <locationY>1583</locationY>
+        <defaultConnector>
+            <targetReference>Opp_Result</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Renewal_Contract</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000AlnBAAS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Renewal_Record</targetReference>
+            </connector>
+            <label>Renewal Contract</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>POC_Stage_Updated</name>
+        <label>POC Stage Updated?</label>
+        <locationX>1458</locationX>
+        <locationY>1007</locationY>
+        <defaultConnector>
+            <targetReference>Most_Recent_Contract_Opp</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>X1_Alignment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>1: Alignment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Alignment_Date</targetReference>
+            </connector>
+            <label>1: Alignment</label>
+        </rules>
+        <rules>
+            <name>X2_Setup_Integration</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>2: Setup &amp; Integration</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Setup_Integration_Date</targetReference>
+            </connector>
+            <label>2: Setup &amp; Integration</label>
+        </rules>
+        <rules>
+            <name>X3_Enrichment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>3: Enrichment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Enrichment_Date</targetReference>
+            </connector>
+            <label>3: Enrichment</label>
+        </rules>
+        <rules>
+            <name>X4_End_User_Testing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.POC_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>4: End User Testing</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_End_User_Testing_Date</targetReference>
+            </connector>
+            <label>4: End User Testing</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Stage_Updated</name>
+        <label>Stage Updated?</label>
+        <locationX>1458</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>POC_Stage_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Solution_Fit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Solution-Fit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Solution_Fit_Date</targetReference>
+            </connector>
+            <label>Solution-Fit</label>
+        </rules>
+        <rules>
+            <name>Validation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Validation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Validation_Date</targetReference>
+            </connector>
+            <label>Validation</label>
+        </rules>
+        <rules>
+            <name>Go_No_Go</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Go / No-Go</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Go_No_Go_Date</targetReference>
+            </connector>
+            <label>Go / No-Go</label>
+        </rules>
+        <rules>
+            <name>Proposal_Negotiation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proposal &amp; Negotiation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Proposal_Negotiation_Date</targetReference>
+            </connector>
+            <label>Proposal &amp; Negotiation</label>
+        </rules>
+        <rules>
+            <name>Contracting_Procurement_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contracting &amp; Procurement</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Contracting_Procurement_Date</targetReference>
+            </connector>
+            <label>Contracting &amp; Procurement</label>
+        </rules>
+    </decisions>
+    <description>v2 - added close date update for newly closed deals
+v3 - Slack testing
+v6 - Slack ready
+v7 - Slack message edits
+v8 - Added CS Slack alert
+v9 - Added CS Slack alert debug (removed filter for closed opps)
+v10 - CS Slack alert message edits
+v11 - Added next step updated date
+v14 - Added &quot;Last stage before lost&quot; update
+v16 - Added POC checkbox update
+v17 - Added lost to competitor slack message
+v18 - Lost to competitor slack message debug
+v19 - Lost to competitor slack message edits
+v20 - Added CS Closed Won Slack alert
+v21 - Added Account owner update
+v22 - Added Account contract update
+v23 - Added upsell opp filter for Slack message
+v25 - Added upsell opp filter for Account contract update
+v26 - Added update to Type based on record type upsell
+v27 - Updated opp filter for Slack message
+v28 - Debugging owner mismatch
+v29 - Slack updates
+v30 - Post Closed Won Alert to Finance Slack
+v31 - Added customer tiers
+v32 - Added Atlan product instance
+v33 - Added SE round robin
+v34 - Added Lead Status update
+v35 - Slack message edits
+v37 - Added expansion/contraction revenue
+v40 - Updated SE assignment and removed SE Slack alert
+v41 - Moved Business Value triggers to own flow
+v43 - Moved Customer Tier to be set at Contracting &amp; Procurement stage
+v44 - Moved closed lost alert to alerts-gtmreports
+v45 - Removed Pilots from Closed Won Slack alert
+v46 - Moved contracting Slack alert to intel channel
+v47 - Debug expansion/contraction renewal contract calculation
+v48 - Last Stage Before Lost debug
+v49 - Added Slack alert to Uriel
+v50 - Changed to new alerts-gtmreports channel
+v51 - Added date stamp fields for Stage and POC Stage
+v52 - Added AE to Account
+v53 - Slack lost opp alert</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>customer_tier</name>
+        <dataType>String</dataType>
+        <expression>IF( OR({!$Record.Account.Dream_Logo__c}, {!$Record.Lighthouse_Customer__c},{!$Record.Amount} &gt;= 75000, {!accelerator_pack_opp_product_id} != &quot;&quot;) 
+   , &quot;Tier 1&quot;
+   , IF({!$Record.Amount} &gt;= 40000
+        , &quot;Tier 2&quot;
+       , &quot;Community&quot;
+     )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>renewal_expansion_contraction</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Order_ARR__c} - {!$Record__Prior.Account.ARR__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>On Opp Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>On Opp Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Find_Accelerator_Product</name>
+        <label>Find Accelerator Product</label>
+        <locationX>314</locationX>
+        <locationY>2135</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Opp_Close_Date_and_Forecast</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Product2Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01t5e000003JbTWAA0</stringValue>
+            </value>
+        </filters>
+        <object>OpportunityLineItem</object>
+        <outputAssignments>
+            <assignToReference>accelerator_pack_opp_product_id</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Set_AE_on_Account</name>
+        <label>Set AE on Account</label>
+        <locationX>50</locationX>
+        <locationY>2975</locationY>
+        <connector>
+            <targetReference>Finance_Alert_Email</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Account_Executive__c</field>
+            <value>
+                <elementReference>$Record.Owner.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Alignment_Date</name>
+        <label>Set Alignment Date</label>
+        <locationX>930</locationX>
+        <locationY>1127</locationY>
+        <connector>
+            <targetReference>Most_Recent_Contract_Opp</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_POC_Alignment__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Contracting_Procurement_Date</name>
+        <label>Set Contracting &amp; Procurement Date</label>
+        <locationX>1854</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>POC_Stage_Updated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_Contracting_Procurement__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Customer_Tier</name>
+        <label>Set Customer Tier</label>
+        <locationX>1282</locationX>
+        <locationY>2255</locationY>
+        <connector>
+            <targetReference>Post_Stage_Move_to_Intel_Slack</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Customer_Tier__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Customer_Tier__c</field>
+            <value>
+                <elementReference>customer_tier</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_End_User_Testing_Date</name>
+        <label>Set End User Testing Date</label>
+        <locationX>1722</locationX>
+        <locationY>1127</locationY>
+        <connector>
+            <targetReference>Most_Recent_Contract_Opp</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_POC_End_User_Testing__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Enrichment_Date</name>
+        <label>Set Enrichment Date</label>
+        <locationX>1458</locationX>
+        <locationY>1127</locationY>
+        <connector>
+            <targetReference>Most_Recent_Contract_Opp</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_POC_Enrichment__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Go_No_Go_Date</name>
+        <label>Set Go / No-Go Date</label>
+        <locationX>1326</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>POC_Stage_Updated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_Go_No_Go__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Last_Stage_Before_Lost</name>
+        <label>Set Last Stage Before Lost</label>
+        <locationX>1458</locationX>
+        <locationY>3767</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Last_Stage_Before_Lost__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Last_Stage_Before_Lost__c</field>
+            <value>
+                <elementReference>$Record__Prior.StageName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Product_Instance</name>
+        <label>Set Product Instance</label>
+        <locationX>50</locationX>
+        <locationY>2855</locationY>
+        <connector>
+            <targetReference>Set_AE_on_Account</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Atlan_Product_Version__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Atlan_Product_Version__c</field>
+            <value>
+                <stringValue>2.0</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Proposal_Negotiation_Date</name>
+        <label>Set Proposal &amp; Negotiation Date</label>
+        <locationX>1590</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>POC_Stage_Updated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_Proposal_Negotiation__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Setup_Integration_Date</name>
+        <label>Set Setup Integration Date</label>
+        <locationX>1194</locationX>
+        <locationY>1127</locationY>
+        <connector>
+            <targetReference>Most_Recent_Contract_Opp</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_POC_Setup_Integration__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Solution_Fit_Date</name>
+        <label>Set Solution-Fit Date</label>
+        <locationX>798</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>POC_Stage_Updated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_Solution_Fit__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Validation_Date</name>
+        <label>Set Validation Date</label>
+        <locationX>1062</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>POC_Stage_Updated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Entered_Validation__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_Contract_Data</name>
+        <label>Update Account Contract Data</label>
+        <locationX>1172</locationX>
+        <locationY>1463</locationY>
+        <connector>
+            <targetReference>Opp_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Contract_Term_months__c</field>
+            <value>
+                <elementReference>$Record.Contract_Term_months__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opt_out_Term_months__c</field>
+            <value>
+                <elementReference>$Record.Opt_out_Term_months__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_Owner</name>
+        <label>Update Account Owner</label>
+        <locationX>1810</locationX>
+        <locationY>2375</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_POC_Checkbox</name>
+        <label>Update Account POC Checkbox</label>
+        <locationX>1942</locationX>
+        <locationY>2135</locationY>
+        <connector>
+            <targetReference>Account_and_Opportunity_Owner_Mismatch</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>POC__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>POC__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opp_Close_Date_and_Forecast</name>
+        <label>Update Opp Close Date and Forecast</label>
+        <locationX>314</locationX>
+        <locationY>2255</locationY>
+        <connector>
+            <targetReference>Opp_Record_Type</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Forecast_Type__c</field>
+            <value>
+                <stringValue>Won</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opp_Close_Date_and_Forecast_0</name>
+        <label>Update Opp Close Date and Forecast</label>
+        <locationX>1458</locationX>
+        <locationY>3647</locationY>
+        <connector>
+            <targetReference>Set_Last_Stage_Before_Lost</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Forecast_Type__c</field>
+            <value>
+                <stringValue>Lost</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opp_Next_Step_Updated_Date</name>
+        <label>Update Opp Next Step Updated Date</label>
+        <locationX>1326</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>Stage_Updated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Next_Step_Updated_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opp_Type</name>
+        <label>Update Opp Type</label>
+        <locationX>1480</locationX>
+        <locationY>1463</locationY>
+        <connector>
+            <targetReference>Opp_Result</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Upsell</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Renewal_Record</name>
+        <label>Update Renewal Record</label>
+        <locationX>1040</locationX>
+        <locationY>1703</locationY>
+        <connector>
+            <targetReference>Opp_Result</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Renewal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Renewal_Record_0</name>
+        <label>Update Renewal Record</label>
+        <locationX>314</locationX>
+        <locationY>2495</locationY>
+        <connector>
+            <targetReference>Finance_Alert_Email</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Expansion_Contraction_ARR__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Expansion_Contraction_ARR__c</field>
+            <value>
+                <elementReference>renewal_expansion_contraction</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1332</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Next_Step_Updated</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>accelerator_pack_opp_product_id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>se_name</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

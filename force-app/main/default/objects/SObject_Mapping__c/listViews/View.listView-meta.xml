@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>View</fullName>
+    <columns>NAME</columns>
+    <columns>JSON_Sobject_Name__c</columns>
+    <columns>Netsuite_Sync_Stage__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>IsActive__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>View</label>
+</ListView>

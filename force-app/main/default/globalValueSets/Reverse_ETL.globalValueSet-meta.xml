@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Census</fullName>
+        <default>false</default>
+        <label>Census</label>
+    </customValue>
+    <customValue>
+        <fullName>Hightouch</fullName>
+        <default>false</default>
+        <label>Hightouch</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Reverse ETL</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

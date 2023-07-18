@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Problem_Statements__c</fullName>
+    <description>Problem statements typically solved or improved through this Value Stream</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Problem statements typically solved or improved through this Value Stream</inlineHelpText>
+    <label>Problem Statements</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DP1 - Improve data team productivity</fullName>
+                <default>false</default>
+                <label>DP1 - Improve data team productivity</label>
+            </value>
+            <value>
+                <fullName>DP2 - Reduce dependencies on the data team/Improve business self-service</fullName>
+                <default>false</default>
+                <label>DP2 - Reduce dependencies on the data team/Improve business self-service</label>
+            </value>
+            <value>
+                <fullName>DP3 - Enable faster onboarding</fullName>
+                <default>false</default>
+                <label>DP3 - Enable faster onboarding</label>
+            </value>
+            <value>
+                <fullName>DP4 - Improve data compliance and security</fullName>
+                <default>false</default>
+                <label>DP4 - Improve data compliance and security</label>
+            </value>
+            <value>
+                <fullName>DP5 - Optimize data stack cost &amp; resources</fullName>
+                <default>false</default>
+                <label>DP5 - Optimize data stack cost &amp; resources</label>
+            </value>
+            <value>
+                <fullName>Collaboration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Collaboration</label>
+            </value>
+            <value>
+                <fullName>Data Quality</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Data Quality</label>
+            </value>
+            <value>
+                <fullName>Data Team Requests</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Data Team Requests</label>
+            </value>
+            <value>
+                <fullName>Data Visibility</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Data Visibility</label>
+            </value>
+            <value>
+                <fullName>Lineage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lineage</label>
+            </value>
+            <value>
+                <fullName>Single Source of Truth</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Single Source of Truth</label>
+            </value>
+            <value>
+                <fullName>Tribal Knowledge</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tribal Knowledge</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

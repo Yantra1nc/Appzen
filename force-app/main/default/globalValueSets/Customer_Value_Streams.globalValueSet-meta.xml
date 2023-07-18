@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Asset Discovery</fullName>
+        <default>false</default>
+        <label>Asset Discovery</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Profile</fullName>
+        <default>false</default>
+        <label>Asset Profile</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Usage</fullName>
+        <default>false</default>
+        <label>Asset Usage</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Glossary</fullName>
+        <default>false</default>
+        <label>Business Glossary</label>
+    </customValue>
+    <customValue>
+        <fullName>Expertise Discovery</fullName>
+        <default>false</default>
+        <label>Expertise Discovery</label>
+    </customValue>
+    <customValue>
+        <fullName>Metrics Definition</fullName>
+        <default>false</default>
+        <label>Metrics Definition</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Context</fullName>
+        <default>false</default>
+        <label>Project Context</label>
+    </customValue>
+    <customValue>
+        <fullName>RCA</fullName>
+        <default>false</default>
+        <label>RCA</label>
+    </customValue>
+    <masterLabel>Customer Value Streams</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

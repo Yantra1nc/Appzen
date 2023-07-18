@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>action_outbound_message</name>
+        <label>action outbound message</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>Opportunity.R_f96c42a001ff423395d4bba4212b769e</actionName>
+        <actionType>outboundMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <description>Rattle_Renewals Opportunity Won</description>
+    <interviewLabel>Rattle_Renewals Opportunity Won {!$Flow.CurrentRecord} {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Rattle_Renewals Opportunity Won</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>action_outbound_message</targetReference>
+        </connector>
+        <filterFormula>AND(ISCHANGED({!$Record.StageName}), OR(ISPICKVAL({!$Record.StageName}, &quot;Closed Won&quot;)), CASESAFEID({!$Record.RecordTypeId}) = &quot;0125e000000AlnBAAS&quot;)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

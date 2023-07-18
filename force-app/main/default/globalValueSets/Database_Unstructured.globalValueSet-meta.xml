@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>MongoDB</fullName>
+        <default>false</default>
+        <label>MongoDB</label>
+    </customValue>
+    <customValue>
+        <fullName>Dynamo</fullName>
+        <default>false</default>
+        <label>Dynamo</label>
+    </customValue>
+    <customValue>
+        <fullName>Elastic</fullName>
+        <default>false</default>
+        <label>Elastic</label>
+    </customValue>
+    <customValue>
+        <fullName>Neo4j</fullName>
+        <default>false</default>
+        <label>Neo4j</label>
+    </customValue>
+    <customValue>
+        <fullName>Amazon DocumentDB</fullName>
+        <default>false</default>
+        <label>Amazon DocumentDB</label>
+    </customValue>
+    <customValue>
+        <fullName>Apache Cassandra</fullName>
+        <default>false</default>
+        <label>Apache Cassandra</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Database: Unstructured</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

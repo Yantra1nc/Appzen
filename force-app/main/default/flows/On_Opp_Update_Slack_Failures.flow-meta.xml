@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Post 
+Tough loss, we lost an opportunity with {!$Record.Name} to a competitor. Primary Competitor: {!$Record.Primary_Competitor__c},  Secondary Competitor: {!$Record.Secondary_Competitor__c}, Amount: {!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</description>
+        <name>Post_Closed_Lost_Message_to_Slack</name>
+        <label>Post Closed Lost Message to Slack</label>
+        <locationX>880</locationX>
+        <locationY>719</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>Tough break, we lost an opportunity with {!$Record.Name} to a competitor. Primary Competitor: {!$Record.Primary_Competitor__c},  Secondary Competitor: {!$Record.Secondary_Competitor__c}, Amount: ${!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}, Full Details: {!$Record.Closed_Reason_Full_Details__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002t3nNEAQ</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post 
+Heads up, we have a new customer - {!$Record.Account.Name}! Please see opportunity details below.</description>
+        <name>Post_Closed_Won_Message_to_CS_Slack</name>
+        <label>Post Closed Won Message to CS Slack</label>
+        <locationX>50</locationX>
+        <locationY>743</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>Heads up, we have a new customer - {!$Record.Account.Name}! Please see opportunity details below.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002t55mEAA</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post 
+:clap: :clap: Slow clap, we have a new customer! :100: Account: {!$Record.Name}, Amount: {!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c}, Main Closed Reason - Detail: {!$Record.Main_Closed_Reason_Detail__c}</description>
+        <name>Post_Closed_Won_Message_to_Slack</name>
+        <label>Post Closed Won Message to Slack</label>
+        <locationX>57</locationX>
+        <locationY>561</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Post_Closed_Won_Message_to_CS_Slack</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>:clap: :clap: Slow clap, we have a new customer! :100: Account: {!$Record.Name}   Amount: ${!$Record.Amount}, Main Closed Reason:  {!$Record.Main_Closed_Reason__c} - {!$Record.Main_Closed_Reason_Detail__c}, Full Details: {!$Record.Closed_Reason_Full_Details__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002t3nNEAQ</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Post:
+{!$Record.Name} has been moved to the Contracting &amp; Procurement stage and is expected to close {!$Record.CloseDate}.</description>
+        <name>Post_Closed_Won_Message_to_Slack_0</name>
+        <label>Post Stage Move to Sales-CS Slack</label>
+        <locationX>1105</locationX>
+        <locationY>503</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>{!$Record.Name} (expected to be a Tier 2 customer) has been moved to the Contracting &amp; Procurement stage and is targeted to close {!$Record.CloseDate}.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002uHdDEAU</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Post_Sales_Engineer_Assignment</name>
+        <label>Post Sales Engineer Assignment</label>
+        <locationX>538</locationX>
+        <locationY>777</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>Hey folks, {!$Record.Technical_Owner__r.Name} has been assigned to the {!$Record.Name} opportunity.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a0G5e000002tlyWEAQ</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Opp_Record_Type</name>
+        <label>Opp Record Type</label>
+        <locationX>474</locationX>
+        <locationY>392</locationY>
+        <defaultConnectorLabel>Other Record Type</defaultConnectorLabel>
+        <rules>
+            <name>New_Customer_or_Pilot</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000Ak9JAAS</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0125e000000Ak9EAAS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_Closed_Won_Message_to_Slack</targetReference>
+            </connector>
+            <label>New Customer or Pilot</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Opp_Result</name>
+        <label>Opp Result</label>
+        <locationX>769</locationX>
+        <locationY>365</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Won</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsWon</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Opp_Record_Type</targetReference>
+            </connector>
+            <label>Won</label>
+        </rules>
+        <rules>
+            <name>Lost_to_Competitor1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Prospect_Decision__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Signed with Competitor</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_Closed_Lost_Message_to_Slack</targetReference>
+            </connector>
+            <label>Lost to Competitor</label>
+        </rules>
+        <rules>
+            <name>Lost</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Lost</label>
+        </rules>
+        <rules>
+            <name>Contracting_Procurement</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contracting &amp; Procurement</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_Closed_Won_Message_to_Slack_0</targetReference>
+            </connector>
+            <label>Contracting &amp; Procurement</label>
+        </rules>
+        <rules>
+            <name>Business_Value</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Business Value</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_Sales_Engineer_Assignment</targetReference>
+            </connector>
+            <label>Business Value</label>
+        </rules>
+    </decisions>
+    <description>v2 - Added SE Assignment Slack message</description>
+    <formulas>
+        <name>customer_tier</name>
+        <dataType>String</dataType>
+        <expression>IF( OR({!$Record.Account.Dream_Logo__c}, {!$Record.Lighthouse_Customer__c},{!$Record.Amount} &gt;= 75000) 
+   , &quot;Tier 1&quot;
+   , IF({!$Record.Amount} &gt;= 40000
+        , &quot;Tier 2&quot;
+       , &quot;Community&quot;
+     )
+)</expression>
+    </formulas>
+    <interviewLabel>On Opp Update - Slack Failures {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>On Opp Update - Slack Failures</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Opp_Result</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

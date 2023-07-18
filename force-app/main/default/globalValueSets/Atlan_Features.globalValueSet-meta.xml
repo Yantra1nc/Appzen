@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Search &amp; Discovery</fullName>
+        <default>false</default>
+        <label>Search &amp; Discovery</label>
+    </customValue>
+    <customValue>
+        <fullName>Insights</fullName>
+        <default>false</default>
+        <label>Insights</label>
+    </customValue>
+    <customValue>
+        <fullName>Lineage</fullName>
+        <default>false</default>
+        <label>Lineage</label>
+    </customValue>
+    <customValue>
+        <fullName>Glossary</fullName>
+        <default>false</default>
+        <label>Glossary</label>
+    </customValue>
+    <customValue>
+        <fullName>Classification</fullName>
+        <default>false</default>
+        <label>Classification</label>
+    </customValue>
+    <customValue>
+        <fullName>Purpose &amp; Persona</fullName>
+        <default>false</default>
+        <label>Purpose &amp; Persona</label>
+    </customValue>
+    <customValue>
+        <fullName>Custom Metadata</fullName>
+        <default>false</default>
+        <label>Custom Metadata</label>
+    </customValue>
+    <customValue>
+        <fullName>Classification API</fullName>
+        <default>false</default>
+        <label>Classification API</label>
+    </customValue>
+    <customValue>
+        <fullName>Certification</fullName>
+        <default>false</default>
+        <label>Certification</label>
+    </customValue>
+    <customValue>
+        <fullName>Insight Attribute</fullName>
+        <default>false</default>
+        <label>Insight Attribute</label>
+    </customValue>
+    <customValue>
+        <fullName>JIRA</fullName>
+        <default>false</default>
+        <label>JIRA</label>
+    </customValue>
+    <customValue>
+        <fullName>Insight Collection</fullName>
+        <default>false</default>
+        <label>Insight Collection</label>
+    </customValue>
+    <customValue>
+        <fullName>Request Workflow</fullName>
+        <default>false</default>
+        <label>Request Workflow</label>
+    </customValue>
+    <customValue>
+        <fullName>Atlan Link</fullName>
+        <default>false</default>
+        <label>Atlan Link</label>
+    </customValue>
+    <customValue>
+        <fullName>Search API</fullName>
+        <default>false</default>
+        <label>Search API</label>
+    </customValue>
+    <customValue>
+        <fullName>Atlan Announcements</fullName>
+        <default>false</default>
+        <label>Atlan Announcements</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Attribute</fullName>
+        <default>false</default>
+        <label>Asset Attribute</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Owners</fullName>
+        <default>false</default>
+        <label>Asset Owners</label>
+    </customValue>
+    <customValue>
+        <fullName>Monte Carlo</fullName>
+        <default>false</default>
+        <label>Monte Carlo</label>
+    </customValue>
+    <customValue>
+        <fullName>Description &amp; Readme</fullName>
+        <default>false</default>
+        <label>Description &amp; Readme</label>
+    </customValue>
+    <customValue>
+        <fullName>Airflow</fullName>
+        <default>false</default>
+        <label>Airflow</label>
+    </customValue>
+    <customValue>
+        <fullName>Miner</fullName>
+        <default>false</default>
+        <label>Miner</label>
+    </customValue>
+    <customValue>
+        <fullName>Custom Metadata API</fullName>
+        <default>false</default>
+        <label>Custom Metadata API</label>
+    </customValue>
+    <customValue>
+        <fullName>REST APIs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>REST APIs</label>
+    </customValue>
+    <customValue>
+        <fullName>Tool Integrations</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tool Integrations</label>
+    </customValue>
+    <customValue>
+        <fullName>Bots &amp; Requests</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bots &amp; Requests</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Asset Profile</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Data Asset Profile</label>
+    </customValue>
+    <customValue>
+        <fullName>Integrations / Workflows</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Integrations / Workflows</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Page / Landing Page</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Home Page / Landing Page</label>
+    </customValue>
+    <masterLabel>Atlan Features</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

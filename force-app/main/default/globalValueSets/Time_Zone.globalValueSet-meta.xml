@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>LIT (Line Islands Time)</fullName>
+        <default>false</default>
+        <label>LIT (Line Islands Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Apia Time)</fullName>
+        <default>false</default>
+        <label>AT (Apia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PIT (Phoenix Islands Time)</fullName>
+        <default>false</default>
+        <label>PIT (Phoenix Islands Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>TT (Tokelau Time)</fullName>
+        <default>false</default>
+        <label>TT (Tokelau Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>TT (Tonga Time)</fullName>
+        <default>false</default>
+        <label>TT (Tonga Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (Chatham Time)</fullName>
+        <default>false</default>
+        <label>CT (Chatham Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NZT (New Zealand Time)</fullName>
+        <default>false</default>
+        <label>NZT (New Zealand Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Anadyr Time)</fullName>
+        <default>false</default>
+        <label>AT (Anadyr Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Petropavlovsk-Kamchatski Time)</fullName>
+        <default>false</default>
+        <label>PT (Petropavlovsk-Kamchatski Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>FT (Fiji Time)</fullName>
+        <default>false</default>
+        <label>FT (Fiji Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>FST (Fiji Summer Time)</fullName>
+        <default>false</default>
+        <label>FST (Fiji Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>TT (Tuvalu Time)</fullName>
+        <default>false</default>
+        <label>TT (Tuvalu Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MIT (Marshall Islands Time)</fullName>
+        <default>false</default>
+        <label>MIT (Marshall Islands Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NT (Nauru Time)</fullName>
+        <default>false</default>
+        <label>NT (Nauru Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>GIT (Gilbert Islands Time)</fullName>
+        <default>false</default>
+        <label>GIT (Gilbert Islands Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>WIT (Wake Island Time)</fullName>
+        <default>false</default>
+        <label>WIT (Wake Island Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>W&amp;FT (Wallis &amp; Futuna Time)</fullName>
+        <default>false</default>
+        <label>W&amp;FT (Wallis &amp; Futuna Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (Casey Time)</fullName>
+        <default>false</default>
+        <label>CT (Casey Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Magadan Time)</fullName>
+        <default>false</default>
+        <label>MT (Magadan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ST (Sakhalin Time)</fullName>
+        <default>false</default>
+        <label>ST (Sakhalin Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>BT (Bougainville Time)</fullName>
+        <default>false</default>
+        <label>BT (Bougainville Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>VT (Vanuatu Time)</fullName>
+        <default>false</default>
+        <label>VT (Vanuatu Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>SIT (Solomon Islands Time)</fullName>
+        <default>false</default>
+        <label>SIT (Solomon Islands Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>KT (Kosrae Time)</fullName>
+        <default>false</default>
+        <label>KT (Kosrae Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NIT (Norfolk Island Time)</fullName>
+        <default>false</default>
+        <label>NIT (Norfolk Island Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NCT (New Caledonia Time)</fullName>
+        <default>false</default>
+        <label>NCT (New Caledonia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Ponape Time)</fullName>
+        <default>false</default>
+        <label>PT (Ponape Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>LHT (Lord Howe Time)</fullName>
+        <default>false</default>
+        <label>LHT (Lord Howe Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>DT (Dumont-d’Urville Time)</fullName>
+        <default>false</default>
+        <label>DT (Dumont-d’Urville Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AET (Australian Eastern Time)</fullName>
+        <default>false</default>
+        <label>AET (Australian Eastern Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>VT (Vladivostok Time)</fullName>
+        <default>false</default>
+        <label>VT (Vladivostok Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (Chamorro Time)</fullName>
+        <default>false</default>
+        <label>CT (Chamorro Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PNGT (Papua New Guinea Time)</fullName>
+        <default>false</default>
+        <label>PNGT (Papua New Guinea Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (Chuuk Time)</fullName>
+        <default>false</default>
+        <label>CT (Chuuk Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT (Australian Central Time)</fullName>
+        <default>false</default>
+        <label>ACT (Australian Central Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>YT (Yakutsk Time)</fullName>
+        <default>false</default>
+        <label>YT (Yakutsk Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ETT (East Timor Time)</fullName>
+        <default>false</default>
+        <label>ETT (East Timor Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>EIT (Eastern Indonesia Time)</fullName>
+        <default>false</default>
+        <label>EIT (Eastern Indonesia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>KT (Korean Time)</fullName>
+        <default>false</default>
+        <label>KT (Korean Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>JT (Japan Time)</fullName>
+        <default>false</default>
+        <label>JT (Japan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Palau Time)</fullName>
+        <default>false</default>
+        <label>PT (Palau Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ACWT (Australian Central Western Time)</fullName>
+        <default>false</default>
+        <label>ACWT (Australian Central Western Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>BDT (Brunei Darussalam Time)</fullName>
+        <default>false</default>
+        <label>BDT (Brunei Darussalam Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>UT (Ulaanbaatar Time)</fullName>
+        <default>false</default>
+        <label>UT (Ulaanbaatar Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>HKT (Hong Kong Time)</fullName>
+        <default>false</default>
+        <label>HKT (Hong Kong Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>IT (Irkutsk Time)</fullName>
+        <default>false</default>
+        <label>IT (Irkutsk Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Malaysia Time)</fullName>
+        <default>false</default>
+        <label>MT (Malaysia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (China Time)</fullName>
+        <default>false</default>
+        <label>CT (China Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CIT (Central Indonesia Time)</fullName>
+        <default>false</default>
+        <label>CIT (Central Indonesia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Philippine Time)</fullName>
+        <default>false</default>
+        <label>PT (Philippine Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ST (Singapore Time)</fullName>
+        <default>false</default>
+        <label>ST (Singapore Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>TT (Taipei Time)</fullName>
+        <default>false</default>
+        <label>TT (Taipei Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AWT (Australian Western Time)</fullName>
+        <default>false</default>
+        <label>AWT (Australian Western Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>DT (Davis Time)</fullName>
+        <default>false</default>
+        <label>DT (Davis Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>IT (Indochina Time)</fullName>
+        <default>false</default>
+        <label>IT (Indochina Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT+4 (Moscow Time + 4)</fullName>
+        <default>false</default>
+        <label>MT+4 (Moscow Time + 4)</label>
+    </customValue>
+    <customValue>
+        <fullName>HT (Hovd Time)</fullName>
+        <default>false</default>
+        <label>HT (Hovd Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>WIT (Western Indonesia Time)</fullName>
+        <default>false</default>
+        <label>WIT (Western Indonesia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>KT (Krasnoyarsk Time)</fullName>
+        <default>false</default>
+        <label>KT (Krasnoyarsk Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NT (Novosibirsk Time)</fullName>
+        <default>false</default>
+        <label>NT (Novosibirsk Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CIT (Christmas Island Time)</fullName>
+        <default>false</default>
+        <label>CIT (Christmas Island Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Myanmar Time)</fullName>
+        <default>false</default>
+        <label>MT (Myanmar Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CIT (Cocos Islands Time)</fullName>
+        <default>false</default>
+        <label>CIT (Cocos Islands Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>VT (Vostok Time)</fullName>
+        <default>false</default>
+        <label>VT (Vostok Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>EKT (East Kazakhstan Time)</fullName>
+        <default>false</default>
+        <label>EKT (East Kazakhstan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>KT (Kyrgyzstan Time)</fullName>
+        <default>false</default>
+        <label>KT (Kyrgyzstan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>BT (Bangladesh Time)</fullName>
+        <default>false</default>
+        <label>BT (Bangladesh Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>OT (Omsk Time)</fullName>
+        <default>false</default>
+        <label>OT (Omsk Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>BT (Bhutan Time)</fullName>
+        <default>false</default>
+        <label>BT (Bhutan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>IOT (Indian Ocean Time)</fullName>
+        <default>false</default>
+        <label>IOT (Indian Ocean Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NT (Nepal Time)</fullName>
+        <default>false</default>
+        <label>NT (Nepal Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>IST (India Time)</fullName>
+        <default>false</default>
+        <label>IST (India Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Mawson Time)</fullName>
+        <default>false</default>
+        <label>MT (Mawson Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>WKT (West Kazakhstan Time)</fullName>
+        <default>false</default>
+        <label>WKT (West Kazakhstan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>TT (Turkmenistan Time)</fullName>
+        <default>false</default>
+        <label>TT (Turkmenistan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>TT (Tajikistan Time)</fullName>
+        <default>false</default>
+        <label>TT (Tajikistan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Pakistan Time)</fullName>
+        <default>false</default>
+        <label>PT (Pakistan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>UT (Uzbekistan Time)</fullName>
+        <default>false</default>
+        <label>UT (Uzbekistan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>YT (Yekaterinburg Time)</fullName>
+        <default>false</default>
+        <label>YT (Yekaterinburg Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>FS&amp;AT (French Southern &amp; Antarctic Time)</fullName>
+        <default>false</default>
+        <label>FS&amp;AT (French Southern &amp; Antarctic Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Maldives Time)</fullName>
+        <default>false</default>
+        <label>MT (Maldives Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Afghanistan Time)</fullName>
+        <default>false</default>
+        <label>AT (Afghanistan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Azerbaijan Time)</fullName>
+        <default>false</default>
+        <label>AT (Azerbaijan Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>GT (Gulf Time)</fullName>
+        <default>false</default>
+        <label>GT (Gulf Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>GT (Georgia Time)</fullName>
+        <default>false</default>
+        <label>GT (Georgia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Armenia Time)</fullName>
+        <default>false</default>
+        <label>AT (Armenia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ST (Samara Time)</fullName>
+        <default>false</default>
+        <label>ST (Samara Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT+1 (Moscow Time + 1)</fullName>
+        <default>false</default>
+        <label>MT+1 (Moscow Time + 1)</label>
+    </customValue>
+    <customValue>
+        <fullName>ST (Seychelles Time)</fullName>
+        <default>false</default>
+        <label>ST (Seychelles Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Mauritius Time)</fullName>
+        <default>false</default>
+        <label>MT (Mauritius Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>RT (Réunion Time)</fullName>
+        <default>false</default>
+        <label>RT (Réunion Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>IT (Iran Time)</fullName>
+        <default>false</default>
+        <label>IT (Iran Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>EAT (East Africa Time)</fullName>
+        <default>false</default>
+        <label>EAT (East Africa Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ST (Syowa Time)</fullName>
+        <default>false</default>
+        <label>ST (Syowa Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Arabian Time)</fullName>
+        <default>false</default>
+        <label>AT (Arabian Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>EET (Eastern European Time)</fullName>
+        <default>false</default>
+        <label>EET (Eastern European Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Moscow Time)</fullName>
+        <default>false</default>
+        <label>MT (Moscow Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>VT (Volgograd Time)</fullName>
+        <default>false</default>
+        <label>VT (Volgograd Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CAT (Central Africa Time)</fullName>
+        <default>false</default>
+        <label>CAT (Central Africa Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>SAT (South Africa Time)</fullName>
+        <default>false</default>
+        <label>SAT (South Africa Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>EEST (Eastern European Summer Time)</fullName>
+        <default>false</default>
+        <label>EEST (Eastern European Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>IT (Israel Time)</fullName>
+        <default>false</default>
+        <label>IT (Israel Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CET (Central European Time)</fullName>
+        <default>false</default>
+        <label>CET (Central European Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>WAT (West Africa Time)</fullName>
+        <default>false</default>
+        <label>WAT (West Africa Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CEST (Central European Summer Time)</fullName>
+        <default>false</default>
+        <label>CEST (Central European Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT (Greenwich Mean Time)</fullName>
+        <default>false</default>
+        <label>GMT (Greenwich Mean Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>WET (Western European Time)</fullName>
+        <default>false</default>
+        <label>WET (Western European Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>WEST (Western European Summer Time)</fullName>
+        <default>false</default>
+        <label>WEST (Western European Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>IT (Irish Time)</fullName>
+        <default>false</default>
+        <label>IT (Irish Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>BST (British Summer Time)</fullName>
+        <default>false</default>
+        <label>BST (British Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMTG (Greenwich Mean Time GMT))</fullName>
+        <default>false</default>
+        <label>GMTG (Greenwich Mean Time GMT))</label>
+    </customValue>
+    <customValue>
+        <fullName>EGT (East Greenland Time)</fullName>
+        <default>false</default>
+        <label>EGT (East Greenland Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>EGST (East Greenland Summer Time)</fullName>
+        <default>false</default>
+        <label>EGST (East Greenland Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Azores Time)</fullName>
+        <default>false</default>
+        <label>AT (Azores Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AST (Azores Summer Time)</fullName>
+        <default>false</default>
+        <label>AST (Azores Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CVT (Cape Verde Time)</fullName>
+        <default>false</default>
+        <label>CVT (Cape Verde Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>FdNT (Fernando de Noronha Time)</fullName>
+        <default>false</default>
+        <label>FdNT (Fernando de Noronha Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>SGT (South Georgia Time)</fullName>
+        <default>false</default>
+        <label>SGT (South Georgia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>BT (Brasilia Time)</fullName>
+        <default>false</default>
+        <label>BT (Brasilia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Argentina Time)</fullName>
+        <default>false</default>
+        <label>AT (Argentina Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>FGT (French Guiana Time)</fullName>
+        <default>false</default>
+        <label>FGT (French Guiana Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>WGT (West Greenland Time)</fullName>
+        <default>false</default>
+        <label>WGT (West Greenland Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>WGST (West Greenland Summer Time)</fullName>
+        <default>false</default>
+        <label>WGST (West Greenland Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>SP&amp;MT (St. Pierre &amp; Miquelon Time)</fullName>
+        <default>false</default>
+        <label>SP&amp;MT (St. Pierre &amp; Miquelon Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>UT (Uruguay Time)</fullName>
+        <default>false</default>
+        <label>UT (Uruguay Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ST (Suriname Time)</fullName>
+        <default>false</default>
+        <label>ST (Suriname Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (Chile Time)</fullName>
+        <default>false</default>
+        <label>CT (Chile Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>RT (Rothera Time)</fullName>
+        <default>false</default>
+        <label>RT (Rothera Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>FIT (Falkland Islands Time)</fullName>
+        <default>false</default>
+        <label>FIT (Falkland Islands Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NT (Newfoundland Time)</fullName>
+        <default>false</default>
+        <label>NT (Newfoundland Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Atlantic Time)</fullName>
+        <default>false</default>
+        <label>AT (Atlantic Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Paraguay Time)</fullName>
+        <default>false</default>
+        <label>PT (Paraguay Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PST (Paraguay Summer Time)</fullName>
+        <default>false</default>
+        <label>PST (Paraguay Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Amazon Time)</fullName>
+        <default>false</default>
+        <label>AT (Amazon Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>VT (Venezuela Time)</fullName>
+        <default>false</default>
+        <label>VT (Venezuela Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>GT (Guyana Time)</fullName>
+        <default>false</default>
+        <label>GT (Guyana Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>BT (Bolivia Time)</fullName>
+        <default>false</default>
+        <label>BT (Bolivia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CST (Chile Summer Time)</fullName>
+        <default>false</default>
+        <label>CST (Chile Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (Colombia Time)</fullName>
+        <default>false</default>
+        <label>CT (Colombia Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ET (Eastern Time)</fullName>
+        <default>false</default>
+        <label>ET (Eastern Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Acre Time)</fullName>
+        <default>false</default>
+        <label>AT (Acre Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ET (Ecuador Time)</fullName>
+        <default>false</default>
+        <label>ET (Ecuador Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (Cuba Time)</fullName>
+        <default>false</default>
+        <label>CT (Cuba Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Peru Time)</fullName>
+        <default>false</default>
+        <label>PT (Peru Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CT (Central Time)</fullName>
+        <default>false</default>
+        <label>CT (Central Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>EIT (Easter Island Time)</fullName>
+        <default>false</default>
+        <label>EIT (Easter Island Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>EIST (Easter Island Summer Time)</fullName>
+        <default>false</default>
+        <label>EIST (Easter Island Summer Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>GT (Galapagos Time)</fullName>
+        <default>false</default>
+        <label>GT (Galapagos Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Mountain Time)</fullName>
+        <default>false</default>
+        <label>MT (Mountain Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MPT (Mexican Pacific Time)</fullName>
+        <default>false</default>
+        <label>MPT (Mexican Pacific Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Pacific Time)</fullName>
+        <default>false</default>
+        <label>PT (Pacific Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NMT (Northwest Mexico Time)</fullName>
+        <default>false</default>
+        <label>NMT (Northwest Mexico Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>PT (Pitcairn Time)</fullName>
+        <default>false</default>
+        <label>PT (Pitcairn Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>AT (Alaska Time)</fullName>
+        <default>false</default>
+        <label>AT (Alaska Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>GT (Gambier Time)</fullName>
+        <default>false</default>
+        <label>GT (Gambier Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>MT (Marquesas Time)</fullName>
+        <default>false</default>
+        <label>MT (Marquesas Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>HT (Hawaii-Aleutian Time)</fullName>
+        <default>false</default>
+        <label>HT (Hawaii-Aleutian Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>CIT (Cook Islands Time)</fullName>
+        <default>false</default>
+        <label>CIT (Cook Islands Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>TT (Tahiti Time)</fullName>
+        <default>false</default>
+        <label>TT (Tahiti Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>ST (Samoa Time)</fullName>
+        <default>false</default>
+        <label>ST (Samoa Time)</label>
+    </customValue>
+    <customValue>
+        <fullName>NT (Niue Time)</fullName>
+        <default>false</default>
+        <label>NT (Niue Time)</label>
+    </customValue>
+    <masterLabel>Time Zone</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

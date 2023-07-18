@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SAS</fullName>
+        <default>false</default>
+        <label>SAS</label>
+    </customValue>
+    <customValue>
+        <fullName>R</fullName>
+        <default>false</default>
+        <label>R</label>
+    </customValue>
+    <customValue>
+        <fullName>Python</fullName>
+        <default>false</default>
+        <label>Python</label>
+    </customValue>
+    <customValue>
+        <fullName>Apache Spark</fullName>
+        <default>false</default>
+        <label>Apache Spark</label>
+    </customValue>
+    <customValue>
+        <fullName>Big ML</fullName>
+        <default>false</default>
+        <label>Big ML</label>
+    </customValue>
+    <customValue>
+        <fullName>D3</fullName>
+        <default>false</default>
+        <label>D3</label>
+    </customValue>
+    <customValue>
+        <fullName>SageMaker</fullName>
+        <default>false</default>
+        <label>SageMaker</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Data Science</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

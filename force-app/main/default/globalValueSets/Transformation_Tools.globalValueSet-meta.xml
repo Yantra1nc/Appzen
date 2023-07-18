@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>dbt Core</fullName>
+        <default>false</default>
+        <label>dbt Core</label>
+    </customValue>
+    <customValue>
+        <fullName>dbt Cloud</fullName>
+        <default>false</default>
+        <label>dbt Cloud</label>
+    </customValue>
+    <customValue>
+        <fullName>Dataform</fullName>
+        <default>false</default>
+        <label>Dataform</label>
+    </customValue>
+    <customValue>
+        <fullName>LookML</fullName>
+        <default>false</default>
+        <label>LookML</label>
+    </customValue>
+    <customValue>
+        <fullName>Alteryx</fullName>
+        <default>false</default>
+        <label>Alteryx</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>dbt</fullName>
+        <default>false</default>
+        <label>dbt</label>
+    </customValue>
+    <masterLabel>Transformation Tools</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

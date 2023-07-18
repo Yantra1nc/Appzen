@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Great Expectations</fullName>
+        <default>false</default>
+        <label>Great Expectations</label>
+    </customValue>
+    <customValue>
+        <fullName>Montecarlo</fullName>
+        <default>false</default>
+        <label>Montecarlo</label>
+    </customValue>
+    <customValue>
+        <fullName>Soda</fullName>
+        <default>false</default>
+        <label>Soda</label>
+    </customValue>
+    <customValue>
+        <fullName>Databand</fullName>
+        <default>false</default>
+        <label>Databand</label>
+    </customValue>
+    <customValue>
+        <fullName>Deequ</fullName>
+        <default>false</default>
+        <label>Deequ</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Data Observability</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

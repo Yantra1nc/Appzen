@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>Contact_Stage_and_Status</name>
+        <label>Contact Stage and Status</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Demo_Scheduled_or_Disco_Conducted</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Find_Contact.Lead_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Demo Scheduled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Find_Contact.Lead_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Discovery Call - Conducted</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_to_Demo_Conducted</targetReference>
+            </connector>
+            <label>Demo Scheduled or Disco Conducted</label>
+        </rules>
+        <rules>
+            <name>Disco_and_MQL</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Find_Contact.Lead_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Discovery Call - Scheduled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_to_Disco_Conducted</targetReference>
+            </connector>
+            <label>Disco Scheduled</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>ResumeTime</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Flow.CurrentDateTime} + (20/60/24)</expression>
+    </formulas>
+    <interviewLabel>Update Growth Contact Lead Status on Demo {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Growth Contact Lead Status on Demo</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Find_Contact</name>
+        <label>Find Contact</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Contact_Stage_and_Status</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3 OR 4)</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>contact_id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Lead_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Discovery Call - Scheduled</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Lead_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Discovery Call - Conducted</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Lead_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Demo Scheduled</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_to_Demo_Conducted</name>
+        <label>Update to Demo Conducted</label>
+        <locationX>176</locationX>
+        <locationY>950</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Find_Contact.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Lead_Status__c</field>
+            <value>
+                <stringValue>Demo Conducted</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_to_Disco_Conducted</name>
+        <label>Update to Disco Conducted</label>
+        <locationX>132</locationX>
+        <locationY>398</locationY>
+        <connector>
+            <targetReference>Pause_for_20_Minutes</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Find_Contact.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Lead_Status__c</field>
+            <value>
+                <stringValue>Discovery Call - Conducted</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Find_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>contact_id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <waits>
+        <name>Pause_for_20_Minutes</name>
+        <label>Pause for 20 Minutes</label>
+        <locationX>132</locationX>
+        <locationY>518</locationY>
+        <defaultConnectorLabel>Default Path</defaultConnectorLabel>
+        <waitEvents>
+            <name>Pause_for_HubSpot_Sync</name>
+            <conditionLogic>and</conditionLogic>
+            <connector>
+                <targetReference>Update_to_Demo_Conducted</targetReference>
+            </connector>
+            <eventType>AlarmEvent</eventType>
+            <inputParameters>
+                <name>AlarmTime</name>
+                <value>
+                    <elementReference>ResumeTime</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffset</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffsetUnit</name>
+                <value>
+                    <stringValue>Hours</stringValue>
+                </value>
+            </inputParameters>
+            <label>Pause for HubSpot Sync</label>
+        </waitEvents>
+    </waits>
+</Flow>

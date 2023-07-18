@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alation</fullName>
+        <default>false</default>
+        <label>Alation</label>
+    </customValue>
+    <customValue>
+        <fullName>Amundsen</fullName>
+        <default>false</default>
+        <label>Amundsen</label>
+    </customValue>
+    <customValue>
+        <fullName>Collibra</fullName>
+        <default>false</default>
+        <label>Collibra</label>
+    </customValue>
+    <customValue>
+        <fullName>Monte Carlo</fullName>
+        <default>false</default>
+        <label>Monte Carlo</label>
+    </customValue>
+    <customValue>
+        <fullName>Data.world</fullName>
+        <default>false</default>
+        <label>Data.world</label>
+    </customValue>
+    <customValue>
+        <fullName>Informatica</fullName>
+        <default>false</default>
+        <label>Informatica</label>
+    </customValue>
+    <customValue>
+        <fullName>Atlas</fullName>
+        <default>false</default>
+        <label>Atlas</label>
+    </customValue>
+    <customValue>
+        <fullName>Talend</fullName>
+        <default>false</default>
+        <label>Talend</label>
+    </customValue>
+    <customValue>
+        <fullName>Stemma</fullName>
+        <default>false</default>
+        <label>Stemma</label>
+    </customValue>
+    <customValue>
+        <fullName>DataEdo</fullName>
+        <default>false</default>
+        <label>DataEdo</label>
+    </customValue>
+    <customValue>
+        <fullName>Oval Edge</fullName>
+        <default>false</default>
+        <label>Oval Edge</label>
+    </customValue>
+    <customValue>
+        <fullName>Erwin</fullName>
+        <default>false</default>
+        <label>Erwin</label>
+    </customValue>
+    <customValue>
+        <fullName>OneTrust</fullName>
+        <default>false</default>
+        <label>OneTrust</label>
+    </customValue>
+    <customValue>
+        <fullName>Secoda</fullName>
+        <default>false</default>
+        <label>Secoda</label>
+    </customValue>
+    <customValue>
+        <fullName>Castor Data</fullName>
+        <default>false</default>
+        <label>Castor Data</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Select Star</fullName>
+        <default>false</default>
+        <label>Select Star</label>
+    </customValue>
+    <customValue>
+        <fullName>Collate</fullName>
+        <default>false</default>
+        <label>Collate</label>
+    </customValue>
+    <customValue>
+        <fullName>Hitachi Lumada</fullName>
+        <default>false</default>
+        <label>Hitachi Lumada</label>
+    </customValue>
+    <masterLabel>Competitors</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

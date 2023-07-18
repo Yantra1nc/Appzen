@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>The type of tool (e.g. Data Warehouse, BI Tool, etc.)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The type of tool (e.g. Data Warehouse, BI Tool, etc.)</inlineHelpText>
+    <label>Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access Control</fullName>
+                <default>false</default>
+                <label>Access Control</label>
+            </value>
+            <value>
+                <fullName>BI Tool</fullName>
+                <default>false</default>
+                <label>BI Tool</label>
+            </value>
+            <value>
+                <fullName>Cloud</fullName>
+                <default>false</default>
+                <label>Cloud</label>
+            </value>
+            <value>
+                <fullName>Collaboration Tools</fullName>
+                <default>false</default>
+                <label>Collaboration Tools</label>
+            </value>
+            <value>
+                <fullName>Database: Structured</fullName>
+                <default>false</default>
+                <label>Database: Structured</label>
+            </value>
+            <value>
+                <fullName>Database: Unstructured</fullName>
+                <default>false</default>
+                <label>Database: Unstructured</label>
+            </value>
+            <value>
+                <fullName>Data Ingestion Tools</fullName>
+                <default>false</default>
+                <label>Data Ingestion Tools</label>
+            </value>
+            <value>
+                <fullName>Data Lake Metastore</fullName>
+                <default>false</default>
+                <label>Data Lake Metastore</label>
+            </value>
+            <value>
+                <fullName>Data Lake Processing</fullName>
+                <default>false</default>
+                <label>Data Lake Processing</label>
+            </value>
+            <value>
+                <fullName>Data Lake Storage</fullName>
+                <default>false</default>
+                <label>Data Lake Storage</label>
+            </value>
+            <value>
+                <fullName>Data Observability</fullName>
+                <default>false</default>
+                <label>Data Observability</label>
+            </value>
+            <value>
+                <fullName>Data Orchestration</fullName>
+                <default>false</default>
+                <label>Data Orchestration</label>
+            </value>
+            <value>
+                <fullName>Data Science Tools</fullName>
+                <default>false</default>
+                <label>Data Science Tools</label>
+            </value>
+            <value>
+                <fullName>Data Warehouse</fullName>
+                <default>false</default>
+                <label>Data Warehouse</label>
+            </value>
+            <value>
+                <fullName>Issue Tracking Tools</fullName>
+                <default>false</default>
+                <label>Issue Tracking Tools</label>
+            </value>
+            <value>
+                <fullName>Reverse ETL</fullName>
+                <default>false</default>
+                <label>Reverse ETL</label>
+            </value>
+            <value>
+                <fullName>Source Systems</fullName>
+                <default>false</default>
+                <label>Source Systems</label>
+            </value>
+            <value>
+                <fullName>SQL IDE</fullName>
+                <default>false</default>
+                <label>SQL IDE</label>
+            </value>
+            <value>
+                <fullName>Transformation Tools</fullName>
+                <default>false</default>
+                <label>Transformation Tools</label>
+            </value>
+            <value>
+                <fullName>Wikis</fullName>
+                <default>false</default>
+                <label>Wikis</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

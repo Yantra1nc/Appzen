@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>S3</fullName>
+        <default>false</default>
+        <label>S3</label>
+    </customValue>
+    <customValue>
+        <fullName>ADLS</fullName>
+        <default>false</default>
+        <label>ADLS</label>
+    </customValue>
+    <customValue>
+        <fullName>GCS</fullName>
+        <default>false</default>
+        <label>GCS</label>
+    </customValue>
+    <customValue>
+        <fullName>Iceberg</fullName>
+        <default>false</default>
+        <label>Iceberg</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Data Lake Storage</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

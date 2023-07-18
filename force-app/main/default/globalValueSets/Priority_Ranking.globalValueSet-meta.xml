@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Primary</fullName>
+        <default>false</default>
+        <label>Primary</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary</fullName>
+        <default>false</default>
+        <label>Secondary</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Priority Ranking</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

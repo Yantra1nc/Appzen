@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aginity (EC)</fullName>
+        <default>false</default>
+        <label>Aginity (EC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Azure Data Catalog (EC)</fullName>
+        <default>false</default>
+        <label>Azure Data Catalog (EC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Google Data Catalog (EC)</fullName>
+        <default>false</default>
+        <label>Google Data Catalog (EC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Glue Catalog (EC)</fullName>
+        <default>false</default>
+        <label>Glue Catalog (EC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Databricks Unity (EC)</fullName>
+        <default>false</default>
+        <label>Databricks Unity (EC)</label>
+    </customValue>
+    <customValue>
+        <fullName>SAP Data Intelligence (EC)</fullName>
+        <default>false</default>
+        <label>SAP Data Intelligence (EC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tableau Data Catalog (EC)</fullName>
+        <default>false</default>
+        <label>Tableau Data Catalog (EC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Amundsen (OS)</fullName>
+        <default>false</default>
+        <label>Amundsen (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Apache Atlas (OS)</fullName>
+        <default>false</default>
+        <label>Apache Atlas (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>CKAN (OS)</fullName>
+        <default>false</default>
+        <label>CKAN (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Datahub (OS)</fullName>
+        <default>false</default>
+        <label>Datahub (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Egeria (OS)</fullName>
+        <default>false</default>
+        <label>Egeria (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Knowledge-repo (OS)</fullName>
+        <default>false</default>
+        <label>Knowledge-repo (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Magda (OS)</fullName>
+        <default>false</default>
+        <label>Magda (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Marquez (OS)</fullName>
+        <default>false</default>
+        <label>Marquez (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Metacat (OS)</fullName>
+        <default>false</default>
+        <label>Metacat (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Whale (OS)</fullName>
+        <default>false</default>
+        <label>Whale (OS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Adaptive (IN)</fullName>
+        <default>false</default>
+        <label>Adaptive (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alation (IN)</fullName>
+        <default>false</default>
+        <label>Alation (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alex solutions (IN)</fullName>
+        <default>false</default>
+        <label>Alex solutions (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alteryx (IN)</fullName>
+        <default>false</default>
+        <label>Alteryx (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cambridge Semantics - Anzo (IN)</fullName>
+        <default>false</default>
+        <label>Cambridge Semantics - Anzo (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cloudera (IN)</fullName>
+        <default>false</default>
+        <label>Cloudera (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Collibra (IN)</fullName>
+        <default>false</default>
+        <label>Collibra (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Erwin (IN)</fullName>
+        <default>false</default>
+        <label>Erwin (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Global ID DEEP (IN)</fullName>
+        <default>false</default>
+        <label>Global ID DEEP (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>IBM Data Catalog (IN)</fullName>
+        <default>false</default>
+        <label>IBM Data Catalog (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Infogix (IN)</fullName>
+        <default>false</default>
+        <label>Infogix (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Informatica (IN)</fullName>
+        <default>false</default>
+        <label>Informatica (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Manta (IN)</fullName>
+        <default>false</default>
+        <label>Manta (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Oracle Data Catalog (IN)</fullName>
+        <default>false</default>
+        <label>Oracle Data Catalog (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Talend (IN)</fullName>
+        <default>false</default>
+        <label>Talend (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Unifi (IN)</fullName>
+        <default>false</default>
+        <label>Unifi (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Zaloni (IN)</fullName>
+        <default>false</default>
+        <label>Zaloni (IN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Acryl (NA)</fullName>
+        <default>false</default>
+        <label>Acryl (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ataccama (NA)</fullName>
+        <default>false</default>
+        <label>Ataccama (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>BigID (NA)</fullName>
+        <default>false</default>
+        <label>BigID (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Castor (NA)</fullName>
+        <default>false</default>
+        <label>Castor (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Galaxy (NA)</fullName>
+        <default>false</default>
+        <label>Data Galaxy (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Data.world (NA)</fullName>
+        <default>false</default>
+        <label>Data.world (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Dataedo (NA)</fullName>
+        <default>false</default>
+        <label>Dataedo (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Datakin (NA)</fullName>
+        <default>false</default>
+        <label>Datakin (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Metaphor (NA)</fullName>
+        <default>false</default>
+        <label>Metaphor (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Monte Carlo (NA)</fullName>
+        <default>false</default>
+        <label>Monte Carlo (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Octopai (NA)</fullName>
+        <default>false</default>
+        <label>Octopai (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>OvalEdge (NA)</fullName>
+        <default>false</default>
+        <label>OvalEdge (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Secoda (NA)</fullName>
+        <default>false</default>
+        <label>Secoda (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>SelectStar (NA)</fullName>
+        <default>false</default>
+        <label>SelectStar (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Snowboard (NA)</fullName>
+        <default>false</default>
+        <label>Snowboard (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Stemma (NA)</fullName>
+        <default>false</default>
+        <label>Stemma (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Transform (NA)</fullName>
+        <default>false</default>
+        <label>Transform (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tree schema (NA)</fullName>
+        <default>false</default>
+        <label>Tree schema (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Truedat (NA)</fullName>
+        <default>false</default>
+        <label>Truedat (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Zeenea (NA)</fullName>
+        <default>false</default>
+        <label>Zeenea (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Homegrown</fullName>
+        <default>false</default>
+        <label>Homegrown</label>
+    </customValue>
+    <customValue>
+        <fullName>Collate (NA)</fullName>
+        <default>false</default>
+        <label>Collate (NA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hitachi Lumada (EC)</fullName>
+        <default>false</default>
+        <label>Hitachi Lumada (EC)</label>
+    </customValue>
+    <masterLabel>Competitors with Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

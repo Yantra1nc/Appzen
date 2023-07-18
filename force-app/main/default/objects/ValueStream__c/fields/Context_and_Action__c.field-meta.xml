@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Context_and_Action__c</fullName>
+    <description>Context needed to enable the value stream and actions taken as part of the value stream</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Context needed to enable the value stream and actions taken as part of the value stream</inlineHelpText>
+    <label>Context &amp; Action</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quality of data</fullName>
+                <default>false</default>
+                <label>Quality of data</label>
+            </value>
+            <value>
+                <fullName>Size of the table</fullName>
+                <default>false</default>
+                <label>Size of the table</label>
+            </value>
+            <value>
+                <fullName>Link/location of data</fullName>
+                <default>false</default>
+                <label>Link/location of data</label>
+            </value>
+            <value>
+                <fullName>Last updated date of tables</fullName>
+                <default>false</default>
+                <label>Last updated date of tables</label>
+            </value>
+            <value>
+                <fullName>Owners of tables, dashboards</fullName>
+                <default>false</default>
+                <label>Owners of tables, dashboards</label>
+            </value>
+            <value>
+                <fullName>Deprecation status of data</fullName>
+                <default>false</default>
+                <label>Deprecation status of data</label>
+            </value>
+            <value>
+                <fullName>Sensitive data</fullName>
+                <default>false</default>
+                <label>Sensitive data</label>
+            </value>
+            <value>
+                <fullName>Contractual data</fullName>
+                <default>false</default>
+                <label>Contractual data</label>
+            </value>
+            <value>
+                <fullName>Meaning of different tables and columns</fullName>
+                <default>false</default>
+                <label>Meaning of different tables and columns</label>
+            </value>
+            <value>
+                <fullName>KPI definition</fullName>
+                <default>false</default>
+                <label>KPI definition</label>
+            </value>
+            <value>
+                <fullName>Meaning of different queries</fullName>
+                <default>false</default>
+                <label>Meaning of different queries</label>
+            </value>
+            <value>
+                <fullName>What query exists</fullName>
+                <default>false</default>
+                <label>What query exists</label>
+            </value>
+            <value>
+                <fullName>Downstream dashboards for tables</fullName>
+                <default>false</default>
+                <label>Downstream dashboards for tables</label>
+            </value>
+            <value>
+                <fullName>Downstream tables</fullName>
+                <default>false</default>
+                <label>Downstream tables</label>
+            </value>
+            <value>
+                <fullName>Dependent tables for dashboards</fullName>
+                <default>false</default>
+                <label>Dependent tables for dashboards</label>
+            </value>
+            <value>
+                <fullName>Upstream tables</fullName>
+                <default>false</default>
+                <label>Upstream tables</label>
+            </value>
+            <value>
+                <fullName>Logic on how tables are created</fullName>
+                <default>false</default>
+                <label>Logic on how tables are created</label>
+            </value>
+            <value>
+                <fullName>How are columns and metrics calculated</fullName>
+                <default>false</default>
+                <label>How are columns and metrics calculated</label>
+            </value>
+            <value>
+                <fullName>Popular tables</fullName>
+                <default>false</default>
+                <label>Popular tables</label>
+            </value>
+            <value>
+                <fullName>What dashboards &amp; reports exists</fullName>
+                <default>false</default>
+                <label>What dashboards &amp; reports exists</label>
+            </value>
+            <value>
+                <fullName>What tables exists</fullName>
+                <default>false</default>
+                <label>What tables exists</label>
+            </value>
+            <value>
+                <fullName>People who need access to data</fullName>
+                <default>false</default>
+                <label>People who need access to data</label>
+            </value>
+            <value>
+                <fullName>Notifying different teams</fullName>
+                <default>false</default>
+                <label>Notifying different teams</label>
+            </value>
+            <value>
+                <fullName>Share data</fullName>
+                <default>false</default>
+                <label>Share data</label>
+            </value>
+            <value>
+                <fullName>Update deprecation status of table</fullName>
+                <default>false</default>
+                <label>Update deprecation status of table</label>
+            </value>
+            <value>
+                <fullName>Document version history</fullName>
+                <default>false</default>
+                <label>Document version history</label>
+            </value>
+            <value>
+                <fullName>Create access policy</fullName>
+                <default>false</default>
+                <label>Create access policy</label>
+            </value>
+            <value>
+                <fullName>Periodically review data to be deleted</fullName>
+                <default>false</default>
+                <label>Periodically review data to be deleted</label>
+            </value>
+            <value>
+                <fullName>Document data science models</fullName>
+                <default>false</default>
+                <label>Document data science models</label>
+            </value>
+            <value>
+                <fullName>Create pivot tables</fullName>
+                <default>false</default>
+                <label>Create pivot tables</label>
+            </value>
+            <value>
+                <fullName>Write SQL to explore the data</fullName>
+                <default>false</default>
+                <label>Write SQL to explore the data</label>
+            </value>
+            <value>
+                <fullName>Create JIRA ticket</fullName>
+                <default>false</default>
+                <label>Create JIRA ticket</label>
+            </value>
+            <value>
+                <fullName>Request access to data</fullName>
+                <default>false</default>
+                <label>Request access to data</label>
+            </value>
+            <value>
+                <fullName>Download list of tables</fullName>
+                <default>false</default>
+                <label>Download list of tables</label>
+            </value>
+            <value>
+                <fullName>Write production SQL code</fullName>
+                <default>false</default>
+                <label>Write production SQL code</label>
+            </value>
+            <value>
+                <fullName>Modify production pipeline scripts</fullName>
+                <default>false</default>
+                <label>Modify production pipeline scripts</label>
+            </value>
+            <value>
+                <fullName>Updating BI model</fullName>
+                <default>false</default>
+                <label>Updating BI model</label>
+            </value>
+            <value>
+                <fullName>Create python models</fullName>
+                <default>false</default>
+                <label>Create python models</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
